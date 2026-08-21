@@ -1,62 +1,1216 @@
 <!doctype html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070707">
+
 <title>RoyalGoyal Video Showcase</title>
+
 <style>
-:root{--bg:#050505;--panel:#0b0c0c;--gold:#d8a23a;--gold2:#ffd86e;--text:#f7f4ed;--muted:#aaa59b;--line:rgba(216,162,58,.36)}
-*{box-sizing:border-box}html,body{margin:0;background:#050505;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}body{background:radial-gradient(circle at 50% 0,rgba(216,162,58,.11),transparent 32%),linear-gradient(#070707,#040404)}
-a{text-decoration:none;color:inherit}button{font:inherit}.app{max-width:1200px;margin:auto;min-height:100vh}
-.header{position:sticky;top:0;z-index:10;margin:10px 12px 0;padding:10px 14px;display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:17px;background:rgba(5,5,5,.94);backdrop-filter:blur(12px)}
-.menu{width:43px;height:43px;border:1px solid var(--line);border-radius:12px;background:#090909;color:#fff;font-size:24px}.brand{display:flex;align-items:center;gap:10px}.brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);box-shadow:0 0 20px rgba(216,162,58,.18)}.brand h1{font-family:Georgia,serif;color:var(--gold2);font-size:27px;margin:0;letter-spacing:1px}.brand small{display:block;color:#c9c2b4;letter-spacing:3px;font-size:10px}.profile{margin-left:auto;display:flex;align-items:center;gap:9px}.profile img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--gold)}.profile strong{display:block;font-size:13px}.profile span{font-size:11px;color:var(--muted)}.wa{margin-left:10px;padding:11px 15px;border:1px solid var(--gold);border-radius:12px;background:linear-gradient(135deg,#1b160b,#0c0c0c);color:var(--gold2);font-weight:800;white-space:nowrap}
-.banner{margin:12px;padding:11px 14px;border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;gap:10px}.banner b{color:var(--gold2);font-size:20px}.banner span{font-weight:700;font-size:13px}.banner a{margin-left:auto;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#101010;padding:9px 15px;border-radius:10px;font-weight:900;font-size:12px}
-.grid{display:grid;grid-template-columns:minmax(0,2.15fr) minmax(280px,.85fr);gap:10px;margin:0 12px}.left,.side{min-width:0}.card{border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,#0a0b0b,#070808);overflow:hidden}.player{position:relative;background:#000}.player video{width:100%;display:block;max-height:76vh;background:#000}.tag{position:absolute;top:13px;left:13px;padding:7px 10px;border:1px solid var(--gold);border-radius:9px;background:rgba(0,0,0,.72);color:var(--gold2);font-size:11px;font-weight:900}.quality{position:absolute;right:13px;top:13px;display:flex;gap:5px}.quality span{padding:7px 9px;border-radius:8px;background:#090909;border:1px solid var(--line);font-size:11px;font-weight:900}.quality span:last-child{background:var(--gold2);color:#111}.bigplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:rgba(0,0,0,.72);border:1px solid var(--gold2);color:white;font-size:30px;cursor:pointer;box-shadow:0 0 25px rgba(216,162,58,.28)}.player.playing .bigplay{opacity:0}.player:hover .bigplay{opacity:1}.controls{position:absolute;left:0;right:0;bottom:0;padding:14px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.9));display:flex;align-items:center;gap:8px}.controls button{background:none;border:0;color:white;cursor:pointer;font-size:18px}.time{font-size:11px;min-width:72px;color:#eee}.seek{flex:1;accent-color:var(--gold)}
-.info{padding:15px}.titleline{display:flex;gap:12px;justify-content:space-between}.titleline h2{margin:0 0 9px;font-size:24px}.verify{color:var(--gold2)}.meta{display:flex;flex-wrap:wrap;gap:7px}.meta span{padding:7px 10px;border:1px solid var(--line);border-radius:999px;color:#d7d1c6;font-size:11px}.actions{display:flex;gap:7px}.actions button{width:42px;height:42px;border-radius:11px;background:#090909;color:#fff;border:1px solid var(--line);cursor:pointer}
-.creator{margin:0 15px 15px;padding:13px;border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;gap:12px}.creator img{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--gold)}.creator b{color:var(--gold2)}.creator small{display:block;color:var(--muted);margin-top:4px}.follow{margin-left:auto;border:1px solid var(--gold);background:#0a0a0a;color:var(--gold2);border-radius:20px;padding:9px 16px;font-weight:800}
-.about{margin:0 15px 15px;padding:14px;border:1px solid var(--line);border-radius:14px}.about h3,.side h3{color:var(--gold2);font-size:14px;margin:0 0 8px}.about p{color:#c4bfb4;font-size:13px;line-height:1.55;margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}.tags span{padding:6px 9px;border-radius:9px;background:#101213;border:1px solid #23262a;color:#bcb7ad;font-size:11px}
-.side{padding:13px}.sidehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.sidehead button{background:none;color:var(--gold2);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:11px}.item{display:flex;gap:10px;padding:8px;border:1px solid rgba(216,162,58,.23);border-radius:11px;margin-bottom:8px;background:#070808;cursor:pointer}.item img{width:126px;height:72px;object-fit:cover;border-radius:8px}.item b{font-size:12px;line-height:1.3}.item small{display:block;color:var(--muted);margin-top:7px}.site{margin-top:10px;padding:16px;border:1px solid var(--line);border-radius:14px;text-align:center}.site img{width:70px;height:70px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}.site h3{font-family:Georgia,serif;font-size:20px;margin:8px 0 3px}.site p{font-size:11px;color:var(--muted);margin:0 0 12px}.site a{display:block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111;padding:10px;border-radius:10px;font-weight:900;font-size:12px}
-.footer{text-align:center;color:#777;font-size:11px;padding:20px}.hidden{display:none}
-@media(max-width:850px){.grid{grid-template-columns:1fr}.side{order:2}.profile div{display:block}.wa{display:none}.brand h1{font-size:22px}.brand small{font-size:8px}.header{margin:6px}.banner,.grid{margin-left:6px;margin-right:6px}}
-@media(max-width:560px){.header{gap:8px}.brand img{width:45px;height:45px}.brand h1{font-size:18px}.brand small{letter-spacing:2px;font-size:7px}.profile img{width:38px;height:38px}.profile span{display:none}.banner span{font-size:11px}.banner a{font-size:10px;padding:8px}.titleline h2{font-size:19px}.actions{gap:4px}.actions button{width:38px;height:38px}.creator{margin-left:9px;margin-right:9px}.about{margin-left:9px;margin-right:9px}.item img{width:105px;height:61px}}
+:root{
+  --bg:#050505;
+  --panel:#0b0c0c;
+  --gold:#d8a23a;
+  --gold2:#ffd86e;
+  --text:#f7f4ed;
+  --muted:#aaa59b;
+  --line:rgba(216,162,58,.36);
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  padding:0;
+  background:#050505;
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% 0,rgba(216,162,58,.12),transparent 32%),
+    linear-gradient(#070707,#040404);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+.app{
+  max-width:1200px;
+  margin:auto;
+  min-height:100vh;
+}
+
+/* HEADER */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  margin:10px 12px 0;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:rgba(5,5,5,.95);
+  backdrop-filter:blur(12px);
+}
+
+.menu{
+  width:43px;
+  height:43px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#090909;
+  color:#fff;
+  font-size:23px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand img{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--gold);
+  box-shadow:0 0 20px rgba(216,162,58,.18);
+}
+
+.brand h1{
+  font-family:Georgia,serif;
+  color:var(--gold2);
+  font-size:27px;
+  margin:0;
+  letter-spacing:1px;
+}
+
+.brand small{
+  display:block;
+  color:#c9c2b4;
+  letter-spacing:3px;
+  font-size:10px;
+}
+
+.profile{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.profile img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:50% 22%;
+  border:2px solid var(--gold);
+}
+
+.profile strong{
+  display:block;
+  font-size:13px;
+}
+
+.profile span{
+  font-size:11px;
+  color:var(--muted);
+}
+
+.wa{
+  margin-left:10px;
+  padding:11px 15px;
+  border:1px solid var(--gold);
+  border-radius:12px;
+  background:linear-gradient(135deg,#1b160b,#0c0c0c);
+  color:var(--gold2);
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* BANNER */
+
+.banner{
+  margin:12px;
+  padding:11px 14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.banner b{
+  color:var(--gold2);
+  font-size:20px;
+}
+
+.banner span{
+  font-weight:700;
+  font-size:13px;
+}
+
+.banner a{
+  margin-left:auto;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#101010;
+  padding:9px 15px;
+  border-radius:10px;
+  font-weight:900;
+  font-size:12px;
+}
+
+/* MAIN */
+
+.grid{
+  display:grid;
+  grid-template-columns:minmax(0,2.15fr) minmax(280px,.85fr);
+  gap:10px;
+  margin:0 12px;
+}
+
+.left,.side{
+  min-width:0;
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:17px;
+  background:linear-gradient(180deg,#0a0b0b,#070808);
+  overflow:hidden;
+}
+
+/* VIDEO */
+
+.player{
+  position:relative;
+  background:#000;
+}
+
+.player video{
+  width:100%;
+  display:block;
+  max-height:76vh;
+  background:#000;
+}
+
+.tag{
+  position:absolute;
+  top:13px;
+  left:13px;
+  padding:7px 10px;
+  border:1px solid var(--gold);
+  border-radius:9px;
+  background:rgba(0,0,0,.72);
+  color:var(--gold2);
+  font-size:11px;
+  font-weight:900;
+}
+
+.quality{
+  position:absolute;
+  right:13px;
+  top:13px;
+  display:flex;
+  gap:5px;
+}
+
+.quality span{
+  padding:7px 9px;
+  border-radius:8px;
+  background:#090909;
+  border:1px solid var(--line);
+  font-size:11px;
+  font-weight:900;
+}
+
+.quality span:last-child{
+  background:var(--gold2);
+  color:#111;
+}
+
+.bigplay{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:74px;
+  height:74px;
+  border-radius:50%;
+  background:rgba(0,0,0,.72);
+  border:1px solid var(--gold2);
+  color:white;
+  font-size:30px;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(216,162,58,.28);
+}
+
+.player.playing .bigplay{
+  opacity:0;
+}
+
+.player:hover .bigplay{
+  opacity:1;
+}
+
+.controls{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:14px 14px 10px;
+  background:linear-gradient(transparent,rgba(0,0,0,.92));
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.controls button{
+  background:none;
+  border:0;
+  color:white;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.time{
+  font-size:11px;
+  min-width:80px;
+  color:#eee;
+}
+
+.seek{
+  flex:1;
+  accent-color:var(--gold);
+}
+
+/* INFO */
+
+.info{
+  padding:15px;
+}
+
+.titleline{
+  display:flex;
+  gap:12px;
+  justify-content:space-between;
+}
+
+.titleline h2{
+  margin:0 0 9px;
+  font-size:24px;
+}
+
+.verify{
+  color:var(--gold2);
+}
+
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.meta span{
+  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:#d7d1c6;
+  font-size:11px;
+}
+
+.actions{
+  display:flex;
+  gap:7px;
+}
+
+.actions button{
+  width:42px;
+  height:42px;
+  border-radius:11px;
+  background:#090909;
+  color:#fff;
+  border:1px solid var(--line);
+  cursor:pointer;
+}
+
+/* CREATOR */
+
+.creator{
+  margin:0 15px 15px;
+  padding:13px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.creator img{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:50% 22%;
+  border:2px solid var(--gold);
+}
+
+.creator b{
+  color:var(--gold2);
+}
+
+.creator small{
+  display:block;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+.follow{
+  margin-left:auto;
+  border:1px solid var(--gold);
+  background:#0a0a0a;
+  color:var(--gold2);
+  border-radius:20px;
+  padding:9px 16px;
+  font-weight:800;
+}
+
+/* ABOUT */
+
+.about{
+  margin:0 15px 15px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+}
+
+.about h3,
+.side h3{
+  color:var(--gold2);
+  font-size:14px;
+  margin:0 0 8px;
+}
+
+.about p{
+  color:#c4bfb4;
+  font-size:13px;
+  line-height:1.55;
+  margin:0;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:11px;
+}
+
+.tags span{
+  padding:6px 9px;
+  border-radius:9px;
+  background:#101213;
+  border:1px solid #23262a;
+  color:#bcb7ad;
+  font-size:11px;
+}
+
+/* SIDEBAR */
+
+.side{
+  padding:13px;
+}
+
+.sidehead{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.sidehead button{
+  background:none;
+  color:var(--gold2);
+  border:1px solid var(--line);
+  border-radius:9px;
+  padding:6px 10px;
+  font-size:11px;
+}
+
+.item{
+  display:flex;
+  gap:10px;
+  padding:8px;
+  border:1px solid rgba(216,162,58,.23);
+  border-radius:11px;
+  margin-bottom:8px;
+  background:#070808;
+  cursor:pointer;
+}
+
+.item img{
+  width:126px;
+  height:72px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.item b{
+  font-size:12px;
+  line-height:1.3;
+}
+
+.item small{
+  display:block;
+  color:var(--muted);
+  margin-top:7px;
+}
+
+.site{
+  margin-top:10px;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  text-align:center;
+}
+
+.site img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--gold);
+}
+
+.site h3{
+  font-family:Georgia,serif;
+  font-size:20px;
+  margin:8px 0 3px;
+}
+
+.site p{
+  font-size:11px;
+  color:var(--muted);
+  margin:0 0 12px;
+}
+
+.site a{
+  display:block;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#111;
+  padding:10px;
+  border-radius:10px;
+  font-weight:900;
+  font-size:12px;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  color:#777;
+  font-size:11px;
+  padding:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .side{
+    order:2;
+  }
+
+  .wa{
+    display:none;
+  }
+
+  .brand h1{
+    font-size:22px;
+  }
+
+  .brand small{
+    font-size:8px;
+  }
+
+  .header{
+    margin:6px;
+  }
+
+  .banner,
+  .grid{
+    margin-left:6px;
+    margin-right:6px;
+  }
+}
+
+@media(max-width:560px){
+
+  .header{
+    gap:8px;
+  }
+
+  .brand img{
+    width:45px;
+    height:45px;
+  }
+
+  .brand h1{
+    font-size:18px;
+  }
+
+  .brand small{
+    letter-spacing:2px;
+    font-size:7px;
+  }
+
+  .profile img{
+    width:38px;
+    height:38px;
+  }
+
+  .profile span{
+    display:none;
+  }
+
+  .banner span{
+    font-size:11px;
+  }
+
+  .banner a{
+    font-size:10px;
+    padding:8px;
+  }
+
+  .titleline h2{
+    font-size:19px;
+  }
+
+  .actions{
+    gap:4px;
+  }
+
+  .actions button{
+    width:38px;
+    height:38px;
+  }
+
+  .creator{
+    margin-left:9px;
+    margin-right:9px;
+  }
+
+  .about{
+    margin-left:9px;
+    margin-right:9px;
+  }
+
+  .item img{
+    width:105px;
+    height:61px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <div class="app">
-<header class="header"><button class="menu">☰</button><div class="brand"><img src="assets/royalgoyal-logo.jpg"><div><h1>ROYALGOYAL</h1><small>AI VIDEO FILMMAKERS</small></div></div><div class="profile"><img src="assets/varun-goyal.jpg"><div><strong>VARUN GOYAL ✓</strong><span>AI Video Creator · Website Designer</span></div></div><a class="wa" href="https://wa.me/?text=Hi%20RoyalGoyal%2C%20I%20want%20to%20create%20a%20video.">☏ WHATSAPP ME</a></header>
-<div class="banner"><b>⚡</b><span>TURN YOUR IDEAS INTO SCROLL-STOPPING VIDEOS</span><a href="https://wa.me/?text=Hi%20RoyalGoyal%2C%20I%20want%20to%20create%20a%20video.">GET YOUR AD MADE</a></div>
-<main class="grid"><section class="left">
-<div class="card"><div class="player" id="playerBox"><video id="video" playsinline preload="metadata" poster="assets/video-001-thumb.jpg"></video><div class="tag" id="videoTag">ROYALGOYAL VIDEO</div><div class="quality"><span>HD</span><span>1080P</span></div><button class="bigplay" id="bigPlay">▶</button><div class="controls"><button id="playBtn">▶</button><span class="time" id="time">0:00 / 0:00</span><input class="seek" id="seek" type="range" min="0" max="100" value="0"><button id="muteBtn">🔊</button><button id="fsBtn">⛶</button></div></div>
-<div class="info"><div class="titleline"><div><h2 id="title">RoyalGoyal Featured Video <span class="verify">✓</span></h2><div class="meta"><span id="duration">Video</span><span>🇮🇳 Hindi</span><span>🎬 AI Video</span><span>👑 RoyalGoyal</span></div></div><div class="actions"><button id="waShare">☏</button><button id="copy">⧉</button><button id="share">↗</button></div></div></div>
-<div class="creator"><img src="assets/varun-goyal.jpg"><div><b>VARUN GOYAL ✓</b><small>AI Video Filmmakers · Editor · Ad Creator</small><small>📍 Delhi, India</small></div><button class="follow" onclick="location.href='https://royalgoyal-ai.carrd.co'">WEBSITE</button></div>
-<div class="about"><h3>ABOUT THIS VIDEO</h3><p id="description">Professional video showcase created by RoyalGoyal. This is a dedicated video-player experience designed for sharing individual ads directly with clients on WhatsApp.</p><div class="tags"><span>#RoyalGoyal</span><span>#AIVideo</span><span>#Advertisement</span><span>#VideoShowcase</span><span>#BrandPromotion</span></div></div>
-</div></section>
-<aside class="card side"><div class="sidehead"><h3>MORE ROYALGOYAL VIDEOS</h3><button onclick="location.href='?all=1'">VIEW ALL</button></div><div id="playlist"></div><div class="site"><img src="assets/royalgoyal-logo.jpg"><h3>ROYALGOYAL</h3><p>Website Designer · AI Video Filmmakers</p><a href="https://royalgoyal-ai.carrd.co">🌐 VISIT OUR WEBSITE</a></div></aside></main>
-<footer class="footer">© 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳</footer>
+
+<header class="header">
+
+<button class="menu"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+☰
+</button>
+
+<div class="brand">
+
+<img src="royalgoyal-logo.jpg" alt="RoyalGoyal Logo">
+
+<div>
+<h1>ROYALGOYAL</h1>
+<small>AI VIDEO FILMMAKERS</small>
 </div>
+
+</div>
+
+<div class="profile">
+
+<img src="varun-goyal.jpg" alt="Varun Goyal">
+
+<div>
+<strong>VARUN GOYAL ✓</strong>
+<span>AI Video Creator · Website Designer</span>
+</div>
+
+</div>
+
+<a class="wa"
+href="https://wa.me/?text=Hi%20RoyalGoyal%2C%20I%20want%20to%20create%20a%20video.">
+☏ WHATSAPP ME
+</a>
+
+</header>
+
+
+<div class="banner">
+
+<b>⚡</b>
+
+<span>
+TURN YOUR IDEAS INTO SCROLL-STOPPING VIDEOS
+</span>
+
+<a href="https://wa.me/?text=Hi%20RoyalGoyal%2C%20I%20want%20to%20create%20a%20video.">
+GET YOUR AD MADE
+</a>
+
+</div>
+
+
+<main class="grid">
+
+<section class="left">
+
+<div class="card">
+
+<div class="player" id="playerBox">
+
+<video
+id="video"
+playsinline
+preload="metadata"
+poster="video-001-thumb.jpg"
+controlslist="nodownload"
+>
+<source
+src="royalgoyal-video-001.mp4"
+type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+
+<div class="tag" id="videoTag">
+ROYALGOYAL VIDEO
+</div>
+
+<div class="quality">
+<span>HD</span>
+<span>1080P</span>
+</div>
+
+<button class="bigplay" id="bigPlay">
+▶
+</button>
+
+<div class="controls">
+
+<button id="playBtn">
+▶
+</button>
+
+<span class="time" id="time">
+0:00 / 0:00
+</span>
+
+<input
+class="seek"
+id="seek"
+type="range"
+min="0"
+max="100"
+value="0"
+>
+
+<button id="muteBtn">
+🔊
+</button>
+
+<button id="fsBtn">
+⛶
+</button>
+
+</div>
+
+</div>
+
+
+<div class="info">
+
+<div class="titleline">
+
+<div>
+
+<h2 id="title">
+RoyalGoyal Featured Video
+<span class="verify">✓</span>
+</h2>
+
+<div class="meta">
+
+<span id="duration">
+55 Sec
+</span>
+
+<span>🇮🇳 Hindi</span>
+
+<span>🎬 AI Video</span>
+
+<span>👑 RoyalGoyal</span>
+
+</div>
+
+</div>
+
+<div class="actions">
+
+<button id="waShare">☏</button>
+<button id="copy">⧉</button>
+<button id="share">↗</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="creator">
+
+<img
+src="varun-goyal.jpg"
+alt="Varun Goyal"
+>
+
+<div>
+
+<b>VARUN GOYAL ✓</b>
+
+<small>
+AI Video Filmmakers · Editor · Ad Creator
+</small>
+
+<small>
+📍 Delhi, India
+</small>
+
+</div>
+
+<button
+class="follow"
+onclick="location.href='https://royalgoyal-ai.carrd.co'">
+WEBSITE
+</button>
+
+</div>
+
+
+<div class="about">
+
+<h3>ABOUT THIS VIDEO</h3>
+
+<p id="description">
+Professional video showcase created by RoyalGoyal.
+This dedicated video-player experience is designed for
+sharing individual advertisements directly with clients
+on WhatsApp.
+</p>
+
+<div class="tags">
+
+<span>#RoyalGoyal</span>
+<span>#AIVideo</span>
+<span>#Advertisement</span>
+<span>#VideoShowcase</span>
+<span>#BrandPromotion</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<aside class="card side">
+
+<div class="sidehead">
+
+<h3>MORE ROYALGOYAL VIDEOS</h3>
+
+<button
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+VIEW ALL
+</button>
+
+</div>
+
+<div id="playlist"></div>
+
+<div class="site">
+
+<img
+src="royalgoyal-logo.jpg"
+alt="RoyalGoyal"
+>
+
+<h3>ROYALGOYAL</h3>
+
+<p>
+Website Designer · AI Video Filmmakers
+</p>
+
+<a href="https://royalgoyal-ai.carrd.co">
+🌐 VISIT OUR WEBSITE
+</a>
+
+</div>
+
+</aside>
+
+</main>
+
+
+<footer class="footer">
+© 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳
+</footer>
+
+</div>
+
+
 <script>
-const videos=[
- {id:'001',title:'RoyalGoyal Featured Video',src:'assets/royalgoyal-video-001.mp4',thumb:'assets/video-001-thumb.jpg',tag:'ROYALGOYAL VIDEO',meta:'53 Sec · Hindi · AI Video',desc:'Professional video showcase created by RoyalGoyal. This dedicated player is built for sending individual video links directly to clients on WhatsApp.'}
- // Add more videos here later using the same format:
- // {id:'002',title:'Real Estate Promo',src:'assets/real-estate.mp4',thumb:'assets/real-estate.jpg',tag:'REAL ESTATE AD',meta:'30 Sec · Hindi · Commercial',desc:'...'}
+
+const videos = [
+
+{
+id:"001",
+title:"RoyalGoyal Featured Video",
+src:"royalgoyal-video-001.mp4",
+thumb:"video-001-thumb.jpg",
+tag:"ROYALGOYAL VIDEO",
+meta:"55 Sec · Hindi · AI Video",
+desc:"Professional video showcase created by RoyalGoyal. This dedicated player is designed for sharing individual advertisements directly with clients on WhatsApp."
+}
+
 ];
-const qs=new URLSearchParams(location.search);const requested=qs.get('video')||'001';
-const current=videos.find(v=>v.id===requested)||videos[0];
-const v=document.getElementById('video'), box=document.getElementById('playerBox'), play=document.getElementById('playBtn'), big=document.getElementById('bigPlay'), seek=document.getElementById('seek'), time=document.getElementById('time');
-function fmt(s){if(!isFinite(s))return '0:00';let m=Math.floor(s/60),sec=Math.floor(s%60);return m+':'+String(sec).padStart(2,'0')}
-function load(item){v.src=item.src;v.poster=item.thumb;document.getElementById('title').innerHTML=item.title+' <span class="verify">✓</span>';document.getElementById('videoTag').textContent=item.tag;document.getElementById('duration').textContent=item.meta;document.getElementById('description').textContent=item.desc;document.title=item.title+' · RoyalGoyal'}
-function toggle(){if(v.paused){v.play();}else{v.pause()}}
-load(current);
-play.onclick=toggle;big.onclick=toggle;
-v.onplay=()=>{play.textContent='❚❚';box.classList.add('playing')};v.onpause=()=>{play.textContent='▶';box.classList.remove('playing')};
-v.ontimeupdate=()=>{if(v.duration){seek.value=v.currentTime/v.duration*100;time.textContent=fmt(v.currentTime)+' / '+fmt(v.duration)}};
-seek.oninput=()=>{if(v.duration)v.currentTime=seek.value/100*v.duration};
-document.getElementById('muteBtn').onclick=()=>{v.muted=!v.muted;document.getElementById('muteBtn').textContent=v.muted?'🔇':'🔊'};
-document.getElementById('fsBtn').onclick=()=>{if(v.requestFullscreen)v.requestFullscreen()};
-function link(){return location.href.split('?')[0]+'?video='+current.id}
-document.getElementById('copy').onclick=async()=>{try{await navigator.clipboard.writeText(link());alert('Video link copied!')}catch(e){prompt('Copy this video link:',link())}};
-document.getElementById('share').onclick=()=>{if(navigator.share)navigator.share({title:current.title,text:'Watch this RoyalGoyal video',url:link()});else document.getElementById('copy').click()};
-document.getElementById('waShare').onclick=()=>location.href='https://wa.me/?text='+encodeURIComponent(current.title+'\n'+link());
-const list=document.getElementById('playlist');videos.forEach(item=>{const el=document.createElement('div');el.className='item';el.innerHTML='<img src="'+item.thumb+'"><div><b>'+item.title+'</b><small>'+item.meta+'</small></div>';el.onclick=()=>location.href='?video='+item.id;list.appendChild(el)});
+
+const params =
+new URLSearchParams(window.location.search);
+
+const requested =
+params.get("video") || "001";
+
+const current =
+videos.find(v => v.id === requested) || videos[0];
+
+
+const video =
+document.getElementById("video");
+
+const playerBox =
+document.getElementById("playerBox");
+
+const playBtn =
+document.getElementById("playBtn");
+
+const bigPlay =
+document.getElementById("bigPlay");
+
+const seek =
+document.getElementById("seek");
+
+const time =
+document.getElementById("time");
+
+const muteBtn =
+document.getElementById("muteBtn");
+
+const fsBtn =
+document.getElementById("fsBtn");
+
+const videoTag =
+document.getElementById("videoTag");
+
+
+function formatTime(seconds){
+
+if(!isFinite(seconds)){
+return "0:00";
+}
+
+const minutes =
+Math.floor(seconds / 60);
+
+const secs =
+Math.floor(seconds % 60);
+
+return minutes + ":" +
+String(secs).padStart(2,"0");
+
+}
+
+
+function loadVideo(item){
+
+video.src = item.src;
+
+video.poster = item.thumb;
+
+document.getElementById("title").innerHTML =
+item.title +
+' <span class="verify">✓</span>';
+
+document.getElementById("duration").textContent =
+item.meta;
+
+document.getElementById("description").textContent =
+item.desc;
+
+videoTag.textContent =
+item.tag;
+
+document.title =
+item.title + " · RoyalGoyal";
+
+video.load();
+
+}
+
+
+function toggleVideo(){
+
+if(video.paused){
+
+video.play().catch(function(error){
+console.log("Video play error:",error);
+});
+
+}else{
+
+video.pause();
+
+}
+
+}
+
+
+playBtn.onclick = toggleVideo;
+bigPlay.onclick = toggleVideo;
+
+
+video.addEventListener("play",function(){
+
+playBtn.textContent = "❚❚";
+
+playerBox.classList.add("playing");
+
+});
+
+
+video.addEventListener("pause",function(){
+
+playBtn.textContent = "▶";
+
+playerBox.classList.remove("playing");
+
+});
+
+
+video.addEventListener("loadedmetadata",function(){
+
+time.textContent =
+"0:00 / " +
+formatTime(video.duration);
+
+});
+
+
+video.addEventListener("timeupdate",function(){
+
+if(video.duration){
+
+seek.value =
+(video.currentTime / video.duration) * 100;
+
+time.textContent =
+formatTime(video.currentTime) +
+" / " +
+formatTime(video.duration);
+
+}
+
+});
+
+
+seek.addEventListener("input",function(){
+
+if(video.duration){
+
+video.currentTime =
+(seek.value / 100) * video.duration;
+
+}
+
+});
+
+
+muteBtn.onclick = function(){
+
+video.muted = !video.muted;
+
+muteBtn.textContent =
+video.muted ? "🔇" : "🔊";
+
+};
+
+
+fsBtn.onclick = function(){
+
+if(video.requestFullscreen){
+
+video.requestFullscreen();
+
+}else if(video.webkitEnterFullscreen){
+
+video.webkitEnterFullscreen();
+
+}
+
+};
+
+
+function videoLink(){
+
+return window.location.href
+.split("?")[0] +
+"?video=" +
+current.id;
+
+}
+
+
+document.getElementById("copy").onclick =
+async function(){
+
+const link = videoLink();
+
+try{
+
+await navigator.clipboard.writeText(link);
+
+alert("Video link copied!");
+
+}catch(error){
+
+prompt("Copy this video link:",link);
+
+}
+
+};
+
+
+document.getElementById("share").onclick =
+function(){
+
+const link = videoLink();
+
+if(navigator.share){
+
+navigator.share({
+title:current.title,
+text:"Watch this RoyalGoyal video",
+url:link
+}).catch(function(){});
+
+}else{
+
+document.getElementById("copy").click();
+
+}
+
+};
+
+
+document.getElementById("waShare").onclick =
+function(){
+
+const message =
+current.title +
+"\n\nWatch this RoyalGoyal video:\n" +
+videoLink();
+
+window.location.href =
+"https://wa.me/?text=" +
+encodeURIComponent(message);
+
+};
+
+
+const playlist =
+document.getElementById("playlist");
+
+videos.forEach(function(item){
+
+const element =
+document.createElement("div");
+
+element.className = "item";
+
+element.innerHTML =
+
+'<img src="' +
+item.thumb +
+'" alt="' +
+item.title +
+'">' +
+
+'<div>' +
+
+'<b>' +
+item.title +
+'</b>' +
+
+'<small>' +
+item.meta +
+'</small>' +
+
+'</div>';
+
+element.onclick = function(){
+
+window.location.href =
+"?video=" +
+item.id;
+
+};
+
+playlist.appendChild(element);
+
+});
+
+
+loadVideo(current);
+
 </script>
-</body></html>
+
+</body>
+</html>
