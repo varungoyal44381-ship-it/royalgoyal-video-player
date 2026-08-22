@@ -1,35 +1,605 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RoyalGoyal — Video Showcase</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RoyalGoyal — AI Video Filmmakers</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#080808;color:#f5f5f5;font-family:Arial,sans-serif}.wrap{max-width:760px;margin:auto;padding:14px}.hero{border:1px solid #b98b28;border-radius:22px;padding:24px 18px;text-align:center;background:linear-gradient(145deg,#17130b,#080808)}h1{color:#e9bd55;margin:0 0 4px;font-size:30px}h2{margin:8px 0;font-size:20px}.hero p{color:#ccc;line-height:1.55}.section{margin-top:20px}.section h3{color:#e9bd55}.card{border:1px solid #76571c;border-radius:18px;padding:14px;margin:14px 0;background:#101010}.tag{display:inline-block;border:1px solid #b98b28;border-radius:999px;padding:6px 10px;color:#e9bd55;font-size:12px}.card p{color:#aaa}.video{width:100%;display:block;border-radius:14px;background:#000;max-height:75vh}.footer{text-align:center;color:#888;padding:28px 0}.note{font-size:12px;color:#777}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#050505;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.wrap{
+    width:100%;
+    max-width:780px;
+    margin:auto;
+    padding:14px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    padding:30px 18px;
+    border:1px solid #b98b28;
+    border-radius:24px;
+
+    background:
+    radial-gradient(circle at top,#33240d 0%,#100d07 45%,#050505 100%);
+
+    box-shadow:
+    0 0 35px rgba(201,157,61,.18);
+}
+
+/* PROFILE */
+
+.profile{
+    width:105px;
+    height:105px;
+    margin:0 auto 14px;
+
+    border-radius:50%;
+    overflow:hidden;
+
+    border:3px solid #d7aa42;
+
+    box-shadow:
+    0 0 0 5px rgba(215,170,66,.08),
+    0 0 28px rgba(215,170,66,.35);
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* LOGO */
+
+.logo{
+    width:145px;
+    max-width:60%;
+    height:auto;
+    display:block;
+    margin:0 auto 12px;
+
+    border-radius:12px;
+}
+
+/* HERO TEXT */
+
+.hero h1{
+    margin:6px 0 4px;
+
+    font-size:30px;
+    letter-spacing:3px;
+
+    color:#e9bd55;
+}
+
+.hero h2{
+    margin:4px 0 15px;
+
+    font-size:16px;
+    letter-spacing:1.5px;
+
+    color:#fff;
+}
+
+.hero p{
+    margin:8px 0;
+
+    color:#ccc;
+    line-height:1.65;
+}
+
+.services{
+    color:#e9bd55 !important;
+
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    margin-top:28px;
+}
+
+.section-title{
+    text-align:center;
+
+    margin:0 0 20px;
+
+    color:#e9bd55;
+
+    font-size:21px;
+    letter-spacing:1px;
+}
+
+/* ================= VIDEO CARD ================= */
+
+.card{
+    margin:18px 0;
+    padding:14px;
+
+    border:1px solid #76571c;
+    border-radius:20px;
+
+    background:
+    linear-gradient(145deg,#151515,#080808);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.45);
+}
+
+.tag{
+    display:inline-block;
+
+    padding:6px 11px;
+
+    border:1px solid #b98b28;
+    border-radius:999px;
+
+    color:#e9bd55;
+
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+.card h2{
+    margin:9px 0 14px;
+
+    font-size:19px;
+    color:#fff;
+}
+
+/* VIDEO PLAYER */
+
+.video-box{
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    border:1px solid #292929;
+
+    background:#000;
+}
+
+.video{
+    width:100%;
+
+    display:block;
+
+    background:#000;
+
+    border-radius:15px;
+
+    max-height:75vh;
+}
+
+/* ================= LIBRARY BUTTON ================= */
+
+.library{
+    text-align:center;
+
+    margin:38px 0 20px;
+
+    padding:25px 15px;
+
+    border-top:1px solid #2b2110;
+}
+
+.library-title{
+    color:#e9bd55;
+
+    font-size:18px;
+    font-weight:bold;
+
+    margin-bottom:8px;
+}
+
+.library-text{
+    color:#888;
+
+    font-size:13px;
+
+    margin-bottom:18px;
+}
+
+.library-btn{
+    display:inline-block;
+
+    padding:14px 28px;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    color:#080808;
+
+    background:
+    linear-gradient(135deg,#f4d477,#b98b28);
+
+    font-size:14px;
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    box-shadow:
+    0 0 25px rgba(220,175,70,.25);
+
+    transition:.25s;
+}
+
+.library-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 35px rgba(220,175,70,.45);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    text-align:center;
+
+    padding:28px 0 18px;
+
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+.footer-brand{
+    color:#e9bd55;
+
+    font-size:15px;
+    font-weight:bold;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:480px){
+
+    .wrap{
+        padding:10px;
+    }
+
+    .hero{
+        padding:24px 14px;
+        border-radius:20px;
+    }
+
+    .profile{
+        width:92px;
+        height:92px;
+    }
+
+    .logo{
+        width:125px;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .hero h2{
+        font-size:14px;
+    }
+
+    .section-title{
+        font-size:19px;
+    }
+
+    .card{
+        padding:11px;
+        border-radius:17px;
+    }
+
+    .card h2{
+        font-size:17px;
+    }
+
+    .library-btn{
+        padding:13px 22px;
+        font-size:13px;
+    }
+
+}
+
 </style>
 </head>
-<body><main class="wrap">
+
+
+<body>
+
+<main class="wrap">
+
+
+<!-- ==================================================
+     ROYALGOYAL HERO
+================================================== -->
+
 <section class="hero">
-<h1>ROYALGOYAL</h1><p><b>AI VIDEO FILMMAKERS</b></p>
-<p>हम सिर्फ वीडियो नहीं बनाते — आपके business, product और brand को ऐसी visual identity देते हैं जो audience का attention रोक सके।</p>
-<p>AI Video Ads • Commercial Ads • 2D/3D Animation • Motion Graphics • Social Media Videos</p>
+
+    <!-- VARUN GOYAL DP -->
+    <div class="profile">
+        <img
+            src="varun-goyal.jpg"
+            alt="Varun Goyal">
+    </div>
+
+
+    <!-- ROYALGOYAL LOGO -->
+    <img
+        class="logo"
+        src="royalgoyal-logo.jpg"
+        alt="RoyalGoyal Logo">
+
+
+    <h1>
+        ROYALGOYAL
+    </h1>
+
+
+    <h2>
+        AI VIDEO FILMMAKERS
+    </h2>
+
+
+    <p>
+        हम सिर्फ वीडियो नहीं बनाते —
+        आपके <b>Business, Product और Brand</b>
+        को ऐसी visual identity देते हैं
+        जो audience का attention रोक सके।
+    </p>
+
+
+    <p class="services">
+        AI Video Ads • Commercial Ads •
+        2D/3D Animation • Motion Graphics •
+        Social Media Videos
+    </p>
+
 </section>
-<section class="section"><h3>🎬 OUR VIDEO SHOWCASE</h3>
 
-<article class="card"><span class="tag">Featured Advertisement</span><h2>Featured Advertisement</h2><video class="video" controls playsinline preload="metadata"><source src="1000309085.mp4" type="video/mp4">Your browser does not support video.</video></article>
 
-<article class="card"><span class="tag">2D Animation</span><h2>2D Animation Advertisement</h2><video class="video" controls playsinline preload="metadata"><source src="1000296455.mp4" type="video/mp4"></video></article>
 
-<article class="card"><span class="tag">AI Video Ads</span><h2>Video Demo 01</h2><video class="video" controls playsinline preload="metadata"><source src="1000317391.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">AI Video Ads</span><h2>Video Demo 02</h2><video class="video" controls playsinline preload="metadata"><source src="1000318487.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">Commercial Ads</span><h2>Video Demo 03</h2><video class="video" controls playsinline preload="metadata"><source src="1000320287.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">Social Media Ads</span><h2>Video Demo 04</h2><video class="video" controls playsinline preload="metadata"><source src="1000327582.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">AI Video Ads</span><h2>Video Demo 05</h2><video class="video" controls playsinline preload="metadata"><source src="1000308664.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">AI Video Ads</span><h2>Video Demo 06</h2><video class="video" controls playsinline preload="metadata"><source src="1000317019.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">AI Video Ads</span><h2>Video Demo 07</h2><video class="video" controls playsinline preload="metadata"><source src="1000314510.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">AI Video Ads</span><h2>Video Demo 08</h2><video class="video" controls playsinline preload="metadata"><source src="1000314916.mp4" type="video/mp4"></video></article>
-<article class="card"><span class="tag">Commercial Ads</span><h2>Video Demo 09</h2><video class="video" controls playsinline preload="metadata"><source src="1000313747.mp4" type="video/mp4"></video></article>
+<!-- ==================================================
+     VIDEO SHOWCASE
+================================================== -->
 
-<p class="note">RoyalGoyal Video Showcase • Videos optimized for web sharing.</p>
-</section><div class="footer">© 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳</div>
-</main></body></html>
+<section class="section">
+
+    <h3 class="section-title">
+        🎬 OUR VIDEO SHOWCASE
+    </h3>
+
+
+
+    <!-- VIDEO 01 -->
+
+    <article class="card">
+
+        <span class="tag">
+            AI VIDEO ADS
+        </span>
+
+        <h2>
+            Video Demo 01
+        </h2>
+
+        <div class="video-box">
+
+            <video
+                class="video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="player-wallpaper.png">
+
+                <source
+                    src="1000296455.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- VIDEO 02 -->
+
+    <article class="card">
+
+        <span class="tag">
+            COMMERCIAL ADS
+        </span>
+
+        <h2>
+            Video Demo 02
+        </h2>
+
+        <div class="video-box">
+
+            <video
+                class="video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="player-wallpaper.png">
+
+                <source
+                    src="1000313747.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- VIDEO 03 -->
+
+    <article class="card">
+
+        <span class="tag">
+            COMMERCIAL ADS
+        </span>
+
+        <h2>
+            Video Demo 03
+        </h2>
+
+        <div class="video-box">
+
+            <video
+                class="video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="player-wallpaper.png">
+
+                <source
+                    src="1000320287.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- VIDEO 04 -->
+
+    <article class="card">
+
+        <span class="tag">
+            SOCIAL MEDIA ADS
+        </span>
+
+        <h2>
+            Video Demo 04
+        </h2>
+
+        <div class="video-box">
+
+            <video
+                class="video"
+                controls
+                playsinline
+                preload="metadata"
+                poster="player-wallpaper.png">
+
+                <source
+                    src="1000327582.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     FULL VIDEO LIBRARY
+================================================== -->
+
+<section class="library">
+
+    <div class="library-title">
+        🎬 COMPLETE VIDEO PORTFOLIO
+    </div>
+
+    <div class="library-text">
+        हमारे सभी AI Videos, Commercials और Creative Work देखें।
+    </div>
+
+
+    <!-- PORTFOLIO LINK -->
+
+    <a
+        class="library-btn"
+        href="https://royalgoyal-ai.carrd.co/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        🎬 FULL VIDEO LIBRARY
+
+    </a>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+        ROYALGOYAL
+    </div>
+
+    AI VIDEO FILMMAKERS • WEBSITE DESIGNER
+
+    <br>
+
+    AI Video Ads • Commercial Ads •
+    Animation • Motion Graphics
+
+    <br><br>
+
+    © 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳
+
+</footer>
+
+
+</main>
+
+</body>
+</html>
+
