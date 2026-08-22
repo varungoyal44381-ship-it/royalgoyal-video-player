@@ -3,584 +3,775 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<title>RoyalGoyal — AI Video Filmmakers</title>
+
+<title>RoyalGoyal | AI Video Filmmakers</title>
+
+<meta name="description"
+content="RoyalGoyal AI Video Filmmakers — AI Video Ads, Commercial Ads, 2D/3D Animation, Motion Graphics and Social Media Videos.">
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-background:#070707;
-color:#f5f5f5;
-font-family:Arial,Helvetica,sans-serif
+  font-family:Arial,Helvetica,sans-serif;
+  background:#050505;
+  color:#fff;
+  overflow-x:hidden;
 }
 
-.wrap{
-max-width:850px;
-margin:auto;
-padding:16px
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(190,140,30,.12),transparent 35%),
+    radial-gradient(circle at 100% 70%,rgba(0,180,255,.05),transparent 30%);
+  pointer-events:none;
+  z-index:-1;
 }
 
+/* MAIN CONTAINER */
+.container{
+  width:min(1100px,94%);
+  margin:auto;
+}
+
+/* HERO */
 .hero{
-border:1px solid #b98b28;
-border-radius:24px;
-padding:26px 18px;
-text-align:center;
-background:linear-gradient(145deg,#1b150a,#080808);
-box-shadow:0 0 30px rgba(185,139,40,.10)
+  margin-top:18px;
+  border:1px solid #b98b24;
+  border-radius:28px;
+  overflow:hidden;
+  background:#0b0b0b;
+  box-shadow:
+    0 0 40px rgba(212,163,54,.12),
+    inset 0 0 30px rgba(255,190,50,.03);
 }
 
-.logo{
-width:180px;
-max-width:70%;
-border-radius:18px;
-margin:0 auto 16px;
-display:block
+/* WALLPAPER ONLY ONCE */
+.hero-wallpaper{
+  width:100%;
+  display:block;
+  max-height:650px;
+  object-fit:cover;
+  object-position:center;
 }
 
-h1{
-color:#e9bd55;
-margin:4px 0;
-font-size:32px;
-letter-spacing:3px
+.hero-content{
+  padding:35px 25px 40px;
+  text-align:center;
 }
 
-h2{
-margin:8px 0;
-font-size:21px
+.brand{
+  font-size:clamp(34px,7vw,70px);
+  letter-spacing:7px;
+  font-weight:900;
+  color:#e6b84d;
+  margin-bottom:10px;
 }
 
-.hero p{
-color:#ccc;
-line-height:1.6
+.subtitle{
+  font-size:clamp(18px,3vw,28px);
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:22px;
 }
 
-.services{
-color:#e9bd55;
-font-weight:bold;
-line-height:1.7
+.tagline{
+  max-width:760px;
+  margin:auto;
+  color:#ddd;
+  font-size:clamp(16px,2.5vw,21px);
+  line-height:1.7;
 }
 
-.buttons{
-display:flex;
-gap:10px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:20px
+.tagline strong{
+  color:#fff;
+}
+
+.hero-buttons{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-text-decoration:none;
-border:1px solid #b98b28;
-border-radius:999px;
-padding:11px 17px;
-color:#f5d477;
-background:#111;
-font-weight:bold
+  text-decoration:none;
+  padding:13px 23px;
+  border-radius:30px;
+  font-weight:700;
+  border:1px solid #d2a33a;
+  color:#e6b84d;
+  transition:.25s;
 }
 
-.btn.primary{
-background:#b98b28;
-color:#090909
+.btn:hover{
+  transform:translateY(-3px);
+  background:#d2a33a;
+  color:#000;
 }
 
+/* SERVICES */
 .section{
-margin-top:26px
+  padding:55px 0 10px;
 }
 
 .section-title{
-color:#e9bd55;
-font-size:25px;
-text-align:center;
-margin:0 0 18px
+  text-align:center;
+  color:#e6b84d;
+  font-size:clamp(27px,5vw,42px);
+  margin-bottom:12px;
 }
 
-.status{
-text-align:center;
-color:#999;
-font-size:13px;
-margin:8px 0 18px
+.section-subtitle{
+  text-align:center;
+  color:#aaa;
+  margin-bottom:30px;
+  font-size:16px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:1fr;
-gap:16px
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
 }
 
-.card{
-border:1px solid #76571c;
-border-radius:19px;
-padding:14px;
-background:linear-gradient(145deg,#121212,#0b0b0b)
+.service{
+  padding:22px 15px;
+  text-align:center;
+  border:1px solid #55400e;
+  border-radius:18px;
+  background:linear-gradient(145deg,#151515,#090909);
+  transition:.3s;
 }
 
-.tag{
-display:inline-block;
-border:1px solid #b98b28;
-border-radius:999px;
-padding:6px 10px;
-color:#e9bd55;
-font-size:12px
+.service:hover{
+  transform:translateY(-5px);
+  border-color:#d2a33a;
 }
 
-.card h2{
-color:#fff;
-margin:10px 0 12px
+.service-icon{
+  font-size:30px;
+  margin-bottom:10px;
 }
 
-.video{
-width:100%;
-display:block;
-border-radius:14px;
-background:#000;
-max-height:75vh
+.service h3{
+  font-size:16px;
+  color:#fff;
 }
 
-.empty,.error{
-text-align:center;
-border:1px solid #76571c;
-border-radius:18px;
-padding:22px;
-color:#aaa
+/* FEATURED */
+.featured{
+  margin-top:25px;
+  border:1px solid #6c5115;
+  border-radius:25px;
+  padding:20px;
+  background:#0d0d0d;
 }
 
-.footer{
-text-align:center;
-color:#777;
-padding:32px 0 12px;
-font-size:13px
+.featured-label{
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid #d2a33a;
+  color:#e6b84d;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:15px;
 }
 
-.small{
-color:#777;
-font-size:12px
+.featured h3{
+  font-size:24px;
+  margin-bottom:18px;
 }
 
-@media(min-width:700px){
-.grid{
-grid-template-columns:1fr 1fr
+.featured video{
+  width:100%;
+  max-height:700px;
+  border-radius:18px;
+  background:#000;
 }
-.hero{
-padding:34px
+
+/* VIDEO LIBRARY */
+.library-header{
+  text-align:center;
+  margin-bottom:30px;
 }
+
+.library-count{
+  color:#999;
+  margin-top:8px;
+}
+
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:22px;
+}
+
+.video-card{
+  background:#101010;
+  border:1px solid #55400e;
+  border-radius:22px;
+  padding:16px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.video-card:hover{
+  transform:translateY(-5px);
+  border-color:#d2a33a;
+  box-shadow:0 12px 35px rgba(0,0,0,.45);
+}
+
+.category{
+  display:inline-block;
+  border:1px solid #a57b1e;
+  color:#e6b84d;
+  padding:6px 11px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.video-title{
+  font-size:20px;
+  margin-bottom:13px;
+  line-height:1.3;
+}
+
+.video-card video{
+  width:100%;
+  border-radius:15px;
+  background:#000;
+  display:block;
+  max-height:650px;
+}
+
+.loading{
+  text-align:center;
+  padding:50px 20px;
+  color:#aaa;
+  font-size:17px;
+}
+
+.error{
+  text-align:center;
+  padding:35px 20px;
+  color:#ffb0b0;
+}
+
+/* CONTACT */
+.contact{
+  margin-top:60px;
+  padding:40px 25px;
+  text-align:center;
+  border:1px solid #6c5115;
+  border-radius:25px;
+  background:linear-gradient(145deg,#121212,#080808);
+}
+
+.contact h2{
+  color:#e6b84d;
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.contact p{
+  color:#bbb;
+  line-height:1.7;
+  margin-bottom:24px;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.contact-btn{
+  text-decoration:none;
+  padding:13px 22px;
+  border-radius:30px;
+  border:1px solid #d2a33a;
+  color:#fff;
+  font-weight:bold;
+}
+
+.contact-btn:hover{
+  background:#d2a33a;
+  color:#000;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:35px 15px;
+  color:#777;
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .hero{
+    margin-top:10px;
+    border-radius:20px;
+  }
+
+  .hero-wallpaper{
+    max-height:560px;
+  }
+
+  .hero-content{
+    padding:28px 18px 32px;
+  }
+
+  .brand{
+    letter-spacing:4px;
+  }
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .featured{
+    padding:14px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<main class="wrap">
+<div class="container">
 
-<section class="hero">
+  <!-- ================= HERO ================= -->
+  <section class="hero">
 
-<img
-id="logo"
-class="logo"
-src="royalgoyal-logo.jpg"
-alt="RoyalGoyal Logo"
-onerror="this.onerror=null;this.src='royalgoyal-logo-2.png';"
->
+    <!-- WALLPAPER ONLY ONCE -->
+    <img
+      class="hero-wallpaper"
+      src="player-wallpaper.png"
+      alt="RoyalGoyal AI Video Filmmakers"
+    >
 
-<h1>ROYALGOYAL</h1>
+    <div class="hero-content">
 
-<p><b>AI VIDEO FILMMAKERS</b></p>
+      <div class="brand">ROYALGOYAL</div>
 
-<p>
-We don't just make videos — we give your business,
-product, and brand a visual identity that captures
-your audience's attention.
-</p>
+      <div class="subtitle">
+        AI VIDEO FILMMAKERS
+      </div>
 
-<p class="services">
-AI Video Ads • Commercial Ads • 2D/3D Animation •
-Motion Graphics • Social Media Videos
-</p>
+      <p class="tagline">
+        We don't just make videos — we give your
+        <strong>business, product, and brand</strong>
+        a visual identity that captures your audience's attention.
+      </p>
 
-<div class="buttons">
+      <div class="hero-buttons">
+        <a class="btn" href="#videos">🎬 View Our Work</a>
+        <a class="btn" href="#contact">🤝 Work With Us</a>
+      </div>
 
-<a class="btn primary" href="#video-library">
-🎬 Full Video Library
-</a>
+    </div>
+  </section>
 
-<a
-class="btn"
-href="https://royalgoyal-ai.carrd.co/"
-target="_blank"
-rel="noopener"
->
-🌐 Portfolio
-</a>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section">
+
+    <h2 class="section-title">WHAT WE CREATE</h2>
+
+    <p class="section-subtitle">
+      Professional visual content for modern brands
+    </p>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="service-icon">🎬</div>
+        <h3>AI Video Ads</h3>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">💎</div>
+        <h3>Commercial Ads</h3>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🎨</div>
+        <h3>2D / 3D Animation</h3>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">⚡</div>
+        <h3>Motion Graphics</h3>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">📱</div>
+        <h3>Social Media Videos</h3>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FEATURED ================= -->
+  <section class="section">
+
+    <div class="library-header">
+
+      <h2 class="section-title">⭐ FEATURED VIDEO</h2>
+
+      <p class="section-subtitle">
+        A showcase of our latest visual work
+      </p>
+
+    </div>
+
+    <div id="featuredVideo" class="featured">
+
+      <div class="loading">
+        Loading featured video...
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FULL LIBRARY ================= -->
+  <section class="section" id="videos">
+
+    <div class="library-header">
+
+      <h2 class="section-title">🎬 FULL VIDEO LIBRARY</h2>
+
+      <p id="videoCount" class="library-count">
+        Loading videos...
+      </p>
+
+    </div>
+
+    <div id="videoGrid" class="video-grid">
+
+      <div class="loading">
+        🔄 Loading your video library...
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+
+    <h2>WORK WITH ROYALGOYAL</h2>
+
+    <p>
+      Need an AI video advertisement, commercial,
+      animation or social media video for your business?
+      Let's create something powerful.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a
+        class="contact-btn"
+        href="https://wa.me/"
+        target="_blank">
+        💬 WhatsApp
+      </a>
+
+      <a
+        class="contact-btn"
+        href="mailto:your@email.com">
+        📧 Email
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+
+    © 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳
+
+    <br>
+
+    AI Video Filmmakers · Website Designer
+
+  </footer>
 
 </div>
-
-</section>
-
-
-<section class="section" id="video-library">
-
-<h2 class="section-title">
-🎬 FULL VIDEO LIBRARY
-</h2>
-
-<div id="status" class="status">
-Loading all videos automatically…
-</div>
-
-<div id="videos" class="grid"></div>
-
-</section>
-
-
-<div class="footer">
-
-© 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳
-
-<br>
-
-<span class="small">
-New MP4 videos uploaded to this GitHub repository appear automatically.
-</span>
-
-</div>
-
-</main>
 
 
 <script>
 
 /*
-ROYALGOYAL AUTO VIDEO LIBRARY
+=========================================================
+ROYALGOYAL AUTO VIDEO SYSTEM
+=========================================================
 
-अब भविष्य में नए MP4 upload करने पर
-HTML को edit करने की जरूरत नहीं होगी।
+बस GitHub repository में नई .mp4 file upload करो.
+
+Website GitHub API से automatically MP4 files खोजेगी
+और उन्हें Video Library में दिखाएगी.
+
+HTML में नया video manually add करने की जरूरत नहीं.
+=========================================================
 */
 
-const OWNER = "varungoyal44381-ship-it";
 
-const REPO = "royalgoyal-video-player";
+const GITHUB_OWNER = "varungoyal44381-ship-it";
 
-const BRANCH = "main";
+const GITHUB_REPO = "royalgoyal-video-player";
 
-const API_BASE =
-`https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
-
-const RAW_BASE =
-`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/`;
+const GITHUB_BRANCH = "main";
 
 
-/* पुराने videos के अच्छे titles */
-
-const knownTitles = {
-
-"1000309085.mp4":"Featured Advertisement",
-
-"1000296455.mp4":"2D Animation Advertisement",
-
-"1000317391.mp4":"Video Demo 01",
-
-"1000318487.mp4":"Video Demo 02",
-
-"1000320287.mp4":"Video Demo 03",
-
-"1000327582.mp4":"Video Demo 04",
-
-"1000308664.mp4":"Video Demo 05",
-
-"1000317019.mp4":"Video Demo 06",
-
-"1000314510.mp4":"Video Demo 07",
-
-"1000314916.mp4":"Video Demo 08",
-
-"1000313747.mp4":"Video Demo 09"
-
-};
+const API_URL =
+`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/?ref=${GITHUB_BRANCH}`;
 
 
-/* filename से title बनाना */
+/* Convert filename into nice title */
 
-function titleFromFile(path){
+function makeTitle(filename){
 
-const file =
-path.split("/").pop();
+  let name = filename
+    .replace(/\.[^/.]+$/, "")
+    .replace(/[_-]+/g," ")
+    .replace(/\b\d+\b/g,"")
+    .trim();
 
-if(knownTitles[file])
-return knownTitles[file];
+  if(!name){
+    name = "RoyalGoyal Video";
+  }
 
-return file
-.replace(/\.mp4$/i,"")
-.replace(/[_-]+/g," ")
-.replace(/\b\w/g,c=>c.toUpperCase());
+  return name
+    .replace(/\b\w/g,letter => letter.toUpperCase());
 
 }
 
 
-/* category automatically */
+/* Create video card */
 
-function categoryFromFile(path){
+function createVideoCard(file){
 
-const p =
-path.toLowerCase();
+  const card = document.createElement("article");
 
-if(p.includes("animation"))
-return "2D / 3D Animation";
+  card.className = "video-card";
 
-if(p.includes("commercial"))
-return "Commercial Ads";
+  const category = document.createElement("div");
 
-if(p.includes("social"))
-return "Social Media Ads";
+  category.className = "category";
 
-if(p.includes("featured"))
-return "Featured Advertisement";
-
-return "AI Video Ads";
-
-}
+  category.textContent = "AI VIDEO ADS";
 
 
-/* video का RAW GitHub link */
+  const title = document.createElement("h3");
 
-function rawUrl(path){
+  title.className = "video-title";
 
-return RAW_BASE +
-path
-.split("/")
-.map(encodeURIComponent)
-.join("/");
-
-}
+  title.textContent = makeTitle(file.name);
 
 
-/* GitHub repository से files पढ़ना */
+  const video = document.createElement("video");
 
-async function getFolder(path=""){
+  video.controls = true;
 
-const res =
-await fetch(
-API_BASE + path,
-{
-headers:{
-"Accept":
-"application/vnd.github+json"
-}
-}
-);
+  video.preload = "metadata";
 
-if(!res.ok)
-throw new Error(
-"GitHub API error: " + res.status
-);
+  video.playsInline = true;
 
-return await res.json();
+  video.src = file.download_url;
+
+
+  card.appendChild(category);
+
+  card.appendChild(title);
+
+  card.appendChild(video);
+
+  return card;
 
 }
 
 
-/* सभी folders के अंदर से MP4 ढूँढना */
+/* Load videos */
 
-async function collectMp4(
-path="",
-output=[]
-){
+async function loadVideos(){
 
-const items =
-await getFolder(path);
+  const grid = document.getElementById("videoGrid");
 
-for(const item of items){
+  const count = document.getElementById("videoCount");
 
-if(
-item.type === "file" &&
-/\.mp4$/i.test(item.name)
-){
+  const featured = document.getElementById("featuredVideo");
 
-output.push({
 
-name:item.name,
+  try{
 
-path:item.path,
+    const response = await fetch(API_URL, {
+      headers:{
+        "Accept":"application/vnd.github+json"
+      }
+    });
 
-url:rawUrl(item.path)
 
-});
+    if(!response.ok){
 
-}
+      throw new Error("GitHub API could not be reached.");
 
-else if(item.type === "dir"){
+    }
 
-await collectMp4(
-item.path,
-output
-);
 
-}
+    const files = await response.json();
 
-}
 
-return output;
+    const videos = files
+      .filter(file =>
+        file.type === "file" &&
+        file.name.toLowerCase().endsWith(".mp4")
+      )
+      .sort((a,b) =>
+        a.name.localeCompare(b.name,undefined,{
+          numeric:true,
+          sensitivity:"base"
+        })
+      );
 
-}
 
+    if(videos.length === 0){
 
-/* Videos page पर दिखाना */
+      grid.innerHTML = `
+        <div class="loading">
+          No MP4 videos found yet.
+        </div>
+      `;
 
-function renderVideos(files){
+      count.textContent = "0 videos";
 
-const box =
-document.getElementById("videos");
+      featured.innerHTML = `
+        <div class="loading">
+          Upload your first MP4 video to GitHub.
+        </div>
+      `;
 
-box.innerHTML = "";
+      return;
 
+    }
 
-if(!files.length){
 
-box.innerHTML =
-`<div class="empty">
-No MP4 videos found yet.
-</div>`;
+    count.textContent =
+      `${videos.length} video${videos.length > 1 ? "s" : ""} loaded automatically`;
 
-return;
 
-}
+    /*
+    ============================
+    FEATURED VIDEO
+    ============================
+    */
 
+    const firstVideo = videos[0];
 
-/* filename के हिसाब से order */
 
-files.sort(
-(a,b)=>
-a.path.localeCompare(
-b.path,
-undefined,
-{numeric:true}
-)
-);
+    featured.innerHTML = `
 
+      <div class="featured-label">
+        FEATURED WORK
+      </div>
 
-files.forEach(
-(file,index)=>{
+      <h3>${makeTitle(firstVideo.name)}</h3>
 
-const card =
-document.createElement("article");
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        src="${firstVideo.download_url}">
+      </video>
 
-card.className =
-"card";
+    `;
 
 
-const tag =
-document.createElement("span");
+    /*
+    ============================
+    FULL LIBRARY
+    ============================
+    */
 
-tag.className =
-"tag";
+    grid.innerHTML = "";
 
-tag.textContent =
-categoryFromFile(
-file.path
-);
 
+    videos.forEach(file => {
 
-const h2 =
-document.createElement("h2");
+      const card = createVideoCard(file);
 
-h2.textContent =
-titleFromFile(
-file.path
-);
+      grid.appendChild(card);
 
+    });
 
-const video =
-document.createElement("video");
 
-video.className =
-"video";
+  }catch(error){
 
-video.controls =
-true;
+    console.error(error);
 
-video.playsInline =
-true;
 
-video.preload =
-"metadata";
+    count.textContent = "Unable to load videos";
 
 
-const source =
-document.createElement("source");
+    grid.innerHTML = `
 
-source.src =
-file.url;
+      <div class="error">
 
-source.type =
-"video/mp4";
+        ⚠️ Video library could not be loaded.
 
+        <br><br>
 
-video.appendChild(source);
+        Please check your GitHub repository
+        or try again in a moment.
 
-card.appendChild(tag);
+      </div>
 
-card.appendChild(h2);
+    `;
 
-card.appendChild(video);
 
-box.appendChild(card);
+    featured.innerHTML = `
 
-});
+      <div class="error">
 
-}
+        Featured video could not be loaded.
 
+      </div>
 
-/* Library load */
+    `;
 
-async function loadLibrary(){
-
-const status =
-document.getElementById(
-"status"
-);
-
-try{
-
-const files =
-await collectMp4();
-
-renderVideos(files);
-
-status.textContent =
-`${files.length} video${
-files.length===1?"":"s"
-} loaded automatically.`;
-
-}
-
-catch(error){
-
-console.error(error);
-
-document.getElementById(
-"videos"
-).innerHTML =
-
-`<div class="error">
-
-Video library load nahi ho paayi.
-GitHub repository public hai aur
-internet connection check karein.
-
-</div>`;
-
-status.textContent =
-"Library loading error.";
-
-}
+  }
 
 }
 
 
-loadLibrary();
+/* Start */
+
+loadVideos();
 
 </script>
 
