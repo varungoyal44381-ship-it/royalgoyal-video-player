@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RoyalGoyal | AI Ad Business</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        min-height: 100%;
+        background: #000;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .poster {
+        position: relative;
+        width: 100%;
+        max-width: 864px;
+        line-height: 0;
+    }
+
+    .poster img {
+        width: 100%;
+        height: auto;
+        display: block;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    /* INVISIBLE VIEW OUR WORK BUTTON */
+    .view-work-link {
+        position: absolute;
+
+        /* VIEW OUR WORK button position */
+        left: 4%;
+        top: 71%;
+        width: 92%;
+        height: 7%;
+
+        display: block;
+        z-index: 10;
+
+        background: transparent;
+        border: none;
+        outline: none;
+
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="poster">
+
+    <!-- YOUR POSTER -->
+    <img src="image.jpg" alt="RoyalGoyal AI Ad Business">
+
+    <!-- INVISIBLE CLICKABLE AREA -->
+    <a
+        class="view-work-link"
+        href="https://varungoyal44381-ship-it.github.io/royalgoyal-video-player/"
+        aria-label="View Our Work">
+    </a>
+
+</div>
+
+</body>
+</html>
