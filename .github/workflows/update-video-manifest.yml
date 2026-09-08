@@ -1,0 +1,62 @@
+name: Update video manifest
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build videos.json
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          videos = sorted(
+              [
+                  p.name
+                  for p in Path(".").iterdir()
+                  if p.is_file()
+                  and p.suffix.lower() == ".mp4"
+              ],
+              key=str.casefold
+          )
+
+          Path("videos.json").write_text(
+              json.dumps(
+                  videos,
+                  ensure_ascii=False,
+                  indent=2
+              ) + "\n",
+              encoding="utf-8"
+          )
+
+          print(f"Found {len(videos)} MP4 video(s).")
+          PY
+
+      - name: Commit manifest if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add videos.json
+
+          if git diff --cached --quiet; then
+            echo "videos.json is already up to date."
+          else
+            git commit -m "Auto-update video manifest"
+            git push
+          fi
