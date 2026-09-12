@@ -3,315 +3,331 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>RoyalGoyal | AI Video Filmmakers</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-  scroll-behavior:smooth
-}
+html{scroll-behavior:smooth}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#050505;
-  color:#fff;
-  overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden
 }
 
 .container{
-  width:min(1100px,94%);
-  margin:auto
+width:min(1100px,94%);
+margin:auto
 }
 
 .hero{
-  margin-top:18px;
-  border:1px solid #b98b24;
-  border-radius:28px;
-  overflow:hidden;
-  background:#0b0b0b;
-  box-shadow:0 0 40px rgba(212,163,54,.12)
+margin-top:18px;
+border:1px solid #b98b24;
+border-radius:28px;
+overflow:hidden;
+background:#0b0b0b;
+box-shadow:0 0 40px rgba(212,163,54,.12)
 }
 
 .hero-wallpaper{
-  width:100%;
-  display:block;
-  max-height:650px;
-  object-fit:cover
+width:100%;
+display:block;
+max-height:650px;
+object-fit:cover
 }
 
 .hero-content{
-  padding:35px 25px 40px;
-  text-align:center
+padding:35px 25px 40px;
+text-align:center
 }
 
 .brand{
-  font-size:clamp(34px,7vw,70px);
-  letter-spacing:7px;
-  font-weight:900;
-  color:#e6b84d;
-  margin-bottom:10px
+font-size:clamp(34px,7vw,70px);
+letter-spacing:7px;
+font-weight:900;
+color:#e6b84d;
+margin-bottom:10px
 }
 
 .subtitle{
-  font-size:clamp(18px,3vw,28px);
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:22px
+font-size:clamp(18px,3vw,28px);
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:22px
 }
 
 .tagline{
-  max-width:760px;
-  margin:auto;
-  color:#ddd;
-  font-size:clamp(16px,2.5vw,21px);
-  line-height:1.7
+max-width:760px;
+margin:auto;
+color:#ddd;
+font-size:clamp(16px,2.5vw,21px);
+line-height:1.7
 }
 
 .hero-buttons,
 .contact-buttons{
-  margin-top:28px;
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap
+margin-top:28px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap
 }
 
 .btn,
 .contact-btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:13px 23px;
-  border-radius:30px;
-  font-weight:700;
-  border:1px solid #d2a33a;
-  color:#e6b84d;
-  transition:.25s;
-  cursor:pointer
+display:inline-block;
+text-decoration:none;
+padding:13px 23px;
+border-radius:30px;
+font-weight:700;
+border:1px solid #d2a33a;
+color:#e6b84d;
+transition:.25s;
+cursor:pointer
 }
 
 .btn:hover,
 .contact-btn:hover{
-  transform:translateY(-3px);
-  background:#d2a33a;
-  color:#000
+transform:translateY(-3px);
+background:#d2a33a;
+color:#000
 }
 
 .section{
-  padding:55px 0 10px
+padding:55px 0 10px
 }
 
 .section-title{
-  text-align:center;
-  color:#e6b84d;
-  font-size:clamp(27px,5vw,42px);
-  margin-bottom:12px
+text-align:center;
+color:#e6b84d;
+font-size:clamp(27px,5vw,42px);
+margin-bottom:12px
 }
 
 .section-subtitle{
-  text-align:center;
-  color:#aaa;
-  margin-bottom:30px;
-  font-size:16px
+text-align:center;
+color:#aaa;
+margin-bottom:30px;
+font-size:16px
 }
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px
 }
 
 .service{
-  padding:22px 15px;
-  text-align:center;
-  border:1px solid #55400e;
-  border-radius:18px;
-  background:linear-gradient(145deg,#151515,#090909);
-  transition:.3s
+padding:22px 15px;
+text-align:center;
+border:1px solid #55400e;
+border-radius:18px;
+background:linear-gradient(145deg,#151515,#090909);
+transition:.3s
 }
 
 .service:hover{
-  transform:translateY(-5px);
-  border-color:#d2a33a
+transform:translateY(-5px);
+border-color:#d2a33a
 }
 
 .service-icon{
-  font-size:30px;
-  margin-bottom:10px
+font-size:30px;
+margin-bottom:10px
 }
 
 .service h3{
-  font-size:16px
+font-size:16px
 }
 
+/* MAIN SINGLE PLAYER */
+
 .featured{
-  margin-top:25px;
-  border:1px solid #6c5115;
-  border-radius:25px;
-  padding:20px;
-  background:#0d0d0d
+margin-top:25px;
+border:1px solid #6c5115;
+border-radius:25px;
+padding:20px;
+background:#0d0d0d
 }
 
 .featured-label{
-  display:inline-block;
-  padding:7px 13px;
-  border:1px solid #d2a33a;
-  color:#e6b84d;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:15px
+display:inline-block;
+padding:7px 13px;
+border:1px solid #d2a33a;
+color:#e6b84d;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:15px
 }
 
 .featured h3{
-  font-size:24px;
-  margin-bottom:18px
+font-size:24px;
+margin-bottom:18px
 }
 
-/* MAIN VIDEO PLAYER */
 .featured video{
-  width:100%;
-  min-height:300px;
-  max-height:700px;
-  border-radius:15px;
-  background:#000;
-  display:block;
-  object-fit:contain
+width:100%;
+min-height:300px;
+max-height:700px;
+border-radius:15px;
+background:#000;
+display:block;
+object-fit:contain
 }
 
 /* VIDEO LIBRARY */
+
 .video-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:22px
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:22px
 }
 
 .video-card{
-  background:#101010;
-  border:1px solid #55400e;
-  border-radius:22px;
-  padding:16px;
-  overflow:hidden;
-  transition:.3s
+background:#101010;
+border:1px solid #55400e;
+border-radius:22px;
+padding:16px;
+overflow:hidden;
+transition:.3s
 }
 
 .video-card:hover{
-  transform:translateY(-5px);
-  border-color:#d2a33a
+transform:translateY(-5px);
+border-color:#d2a33a
+}
+
+.video-card.active{
+border-color:#d2a33a;
+box-shadow:0 0 25px rgba(212,163,54,.15)
 }
 
 .category{
-  display:inline-block;
-  border:1px solid #a57b1e;
-  color:#e6b84d;
-  padding:6px 11px;
-  border-radius:20px;
-  font-size:11px;
-  font-weight:bold;
-  margin-bottom:12px
+display:inline-block;
+border:1px solid #a57b1e;
+color:#e6b84d;
+padding:6px 11px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
+margin-bottom:12px
 }
 
 .video-title{
-  font-size:20px;
-  margin-bottom:13px;
-  line-height:1.3
+font-size:20px;
+margin-bottom:13px;
+line-height:1.3
 }
 
-.video-card video{
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:contain;
-  border-radius:15px;
-  background:#000;
-  display:block
+.play-video{
+width:100%;
+min-height:78px;
+border:1px solid #6c5115;
+border-radius:15px;
+background:linear-gradient(145deg,#171717,#080808);
+color:#e6b84d;
+font-size:17px;
+font-weight:800;
+cursor:pointer;
+padding:18px;
+transition:.25s
+}
+
+.play-video:hover{
+background:#d2a33a;
+color:#000;
+transform:translateY(-2px)
+}
+
+.video-card.active .play-video{
+background:#d2a33a;
+color:#000
 }
 
 .loading,
 .error{
-  text-align:center;
-  padding:50px 20px;
-  color:#aaa;
-  font-size:17px
+text-align:center;
+padding:50px 20px;
+color:#aaa;
+font-size:17px
 }
 
 .error{
-  color:#ffb0b0
+color:#ffb0b0
 }
 
 .contact{
-  margin-top:60px;
-  padding:40px 25px;
-  text-align:center;
-  border:1px solid #6c5115;
-  border-radius:25px;
-  background:#0c0c0c
+margin-top:60px;
+padding:40px 25px;
+text-align:center;
+border:1px solid #6c5115;
+border-radius:25px;
+background:#0c0c0c
 }
 
 .contact h2{
-  color:#e6b84d;
-  font-size:30px;
-  margin-bottom:12px
+color:#e6b84d;
+font-size:30px;
+margin-bottom:12px
 }
 
 .contact p{
-  color:#bbb;
-  line-height:1.7;
-  margin-bottom:24px
+color:#bbb;
+line-height:1.7;
+margin-bottom:24px
 }
 
 .contact-buttons{
-  margin-top:0
+margin-top:0
 }
 
 .contact-btn{
-  color:#fff
+color:#fff
 }
 
 footer{
-  text-align:center;
-  padding:35px 15px;
-  color:#777;
-  font-size:14px;
-  line-height:1.7
+text-align:center;
+padding:35px 15px;
+color:#777;
+font-size:14px;
+line-height:1.7
 }
 
 @media(max-width:600px){
 
-  .hero{
-    margin-top:10px;
-    border-radius:20px
-  }
+.hero{
+margin-top:10px;
+border-radius:20px
+}
 
-  .hero-content{
-    padding:28px 18px 32px
-  }
+.hero-content{
+padding:28px 18px 32px
+}
 
-  .brand{
-    letter-spacing:4px
-  }
+.brand{
+letter-spacing:4px
+}
 
-  .video-grid{
-    grid-template-columns:1fr
-  }
+.video-grid{
+grid-template-columns:1fr
+}
 
-  .featured{
-    padding:14px
-  }
+.featured{
+padding:14px
+}
 
-  .featured video{
-    min-height:220px
-  }
+.featured video{
+min-height:220px
+}
 
-  .btn,
-  .contact-btn{
-    width:100%;
-    max-width:300px
-  }
+.btn,
+.contact-btn{
+width:100%;
+max-width:300px
+}
 }
 </style>
 </head>
@@ -321,17 +337,20 @@ footer{
 <div class="container">
 
 <!-- HERO -->
+
 <section class="hero">
 
 <img
-  class="hero-wallpaper"
-  src="player-wallpaper.png"
-  alt="RoyalGoyal AI Video Filmmakers"
+class="hero-wallpaper"
+src="player-wallpaper.png"
+alt="RoyalGoyal AI Video Filmmakers"
 >
 
 <div class="hero-content">
 
-<div class="brand">ROYALGOYAL</div>
+<div class="brand">
+ROYALGOYAL
+</div>
 
 <div class="subtitle">
 AI VIDEO FILMMAKERS
@@ -354,10 +373,10 @@ a visual identity that captures your audience's attention.
 </a>
 
 <a
-  class="btn"
-  href="https://royalgoyal-ai.carrd.co"
-  target="_blank"
-  rel="noopener"
+class="btn"
+href="https://royalgoyal-ai.carrd.co"
+target="_blank"
+rel="noopener"
 >
 🌐 Old Portfolio
 </a>
@@ -369,6 +388,7 @@ a visual identity that captures your audience's attention.
 
 
 <!-- SERVICES -->
+
 <section class="section">
 
 <h2 class="section-title">
@@ -407,10 +427,12 @@ Professional visual content for modern brands
 </div>
 
 </div>
+
 </section>
 
 
-<!-- FEATURED PLAYER -->
+<!-- SINGLE FEATURED PLAYER -->
+
 <section class="section">
 
 <h2 class="section-title">
@@ -418,13 +440,13 @@ Professional visual content for modern brands
 </h2>
 
 <p class="section-subtitle">
-A showcase of our latest visual work
+Select a video from the library below to play it here
 </p>
 
 <div id="featuredVideo" class="featured">
 
 <div class="loading">
-Loading featured video...
+🔄 Loading video player...
 </div>
 
 </div>
@@ -432,7 +454,8 @@ Loading featured video...
 </section>
 
 
-<!-- VIDEO LIBRARY -->
+<!-- FULL VIDEO LIBRARY -->
+
 <section class="section" id="videos">
 
 <h2 class="section-title">
@@ -455,6 +478,7 @@ Loading videos...
 
 
 <!-- CONTACT -->
+
 <section class="contact" id="contact">
 
 <h2>
@@ -471,26 +495,26 @@ Let's create something powerful.
 <div class="contact-buttons">
 
 <a
-  class="contact-btn"
-  href="https://wa.me/918368244843"
-  target="_blank"
-  rel="noopener"
+class="contact-btn"
+href="https://wa.me/918368244843"
+target="_blank"
+rel="noopener"
 >
 💬 WhatsApp
 </a>
 
 <a
-  class="contact-btn"
-  href="mailto:varungoyal44381@gmail.com"
+class="contact-btn"
+href="mailto:varungoyal44381@gmail.com"
 >
 📧 Email
 </a>
 
 <a
-  class="contact-btn"
-  href="https://royalgoyal-ai.carrd.co"
-  target="_blank"
-  rel="noopener"
+class="contact-btn"
+href="https://royalgoyal-ai.carrd.co"
+target="_blank"
+rel="noopener"
 >
 🌐 Portfolio
 </a>
@@ -515,546 +539,658 @@ AI Video Filmmakers · Website Designer
 
 /*
 ====================================================
-ROYALGOYAL FINAL VIDEO PLAYER
+ROYALGOYAL FINAL PLAYER
 ====================================================
 
-1. videos.json automatic rahega
-2. MP4 same GitHub Pages website se load honge
-3. Raw GitHub URL use nahi hoga
-4. Autoplay OFF
-5. Ek time par sirf ONE video play hoga
-6. Dusri video play hote hi baaki sab pause
-7. New MP4 automatically videos.json se load hoga
+IMPORTANT:
+
+• videos.json automatic rahega
+• Page par sirf ONE actual <video> player hoga
+• Library mein duplicate video players nahi honge
+• Autoplay OFF
+• User button click karega tabhi video chalegi
+• New video select karte hi previous video STOP hogi
+• Previous video ka audio bhi STOP hoga
+• MP4 same GitHub Pages origin se load hogi
 ====================================================
 */
 
-
-/* -----------------------------------------------
-   VIDEO MANIFEST
------------------------------------------------- */
 
 const MANIFEST_URL = "./videos.json";
 
 
 /* -----------------------------------------------
-   CREATE SAFE VIDEO URL
+   VIDEO URL
 ------------------------------------------------ */
 
 function videoUrl(filename){
 
-  return "./" + encodeURIComponent(filename);
+return "./" + encodeURIComponent(filename);
 
 }
 
 
 /* -----------------------------------------------
-   MAKE NICE TITLE
+   TITLE
 ------------------------------------------------ */
 
 function makeTitle(filename){
 
-  let name = filename
-    .replace(/\.[^/.]+$/,"")
-    .replace(/[_-]+/g," ")
-    .replace(/\b\d+\b/g,"")
-    .trim();
+let name = filename
 
-  if(!name){
+.replace(/\.[^/.]+$/,"")
 
-    name = "RoyalGoyal Video";
+.replace(/[_-]+/g," ")
 
-  }
+.replace(/\b\d+\b/g,"")
 
-  return name.replace(
-    /\b\w/g,
-    letter => letter.toUpperCase()
-  );
+.trim();
+
+
+if(!name){
+
+name = "RoyalGoyal Video";
+
+}
+
+
+return name.replace(
+
+/\b\w/g,
+
+letter => letter.toUpperCase()
+
+);
 
 }
 
 
 /* -----------------------------------------------
-   ⭐ MOST IMPORTANT PART ⭐
-   
-   ONLY ONE VIDEO CAN PLAY AT A TIME.
-   
-   Agar koi bhi video PLAY hoti hai,
-   to page ki baaki saari videos turant PAUSE.
+   CREATE ONE SINGLE PLAYER
 ------------------------------------------------ */
 
-document.addEventListener(
-  "play",
-  function(event){
+function createMainPlayer(filename){
 
-    if(
-      !event.target ||
-      event.target.tagName !== "VIDEO"
-    ){
-
-      return;
-
-    }
-
-    const activeVideo = event.target;
-
-    document
-      .querySelectorAll("video")
-      .forEach(function(video){
-
-        if(video !== activeVideo){
-
-          video.pause();
-
-        }
-
-      });
-
-  },
-  true
+const featured =
+document.getElementById(
+"featuredVideo"
 );
 
 
-/* -----------------------------------------------
-   EXTRA SAFETY
-   
-   Agar browser/player kisi tarah multiple
-   playback trigger kare to playing event par
-   bhi baaki videos pause karenge.
------------------------------------------------- */
+featured.innerHTML = "";
 
-document.addEventListener(
-  "playing",
-  function(event){
 
-    if(
-      !event.target ||
-      event.target.tagName !== "VIDEO"
-    ){
+/* Label */
 
-      return;
+const label =
+document.createElement("div");
 
-    }
+label.className =
+"featured-label";
 
-    const activeVideo = event.target;
+label.textContent =
+"NOW PLAYING";
 
-    document
-      .querySelectorAll("video")
-      .forEach(function(video){
 
-        if(video !== activeVideo){
+/* Title */
 
-          if(!video.paused){
+const title =
+document.createElement("h3");
 
-            video.pause();
+title.textContent =
+makeTitle(filename);
 
-          }
 
-        }
+/* Player */
 
-      });
+const player =
+document.createElement("video");
 
-  },
-  true
+player.id =
+"mainVideoPlayer";
+
+player.controls =
+true;
+
+player.playsInline =
+true;
+
+player.preload =
+"metadata";
+
+player.autoplay =
+false;
+
+player.setAttribute(
+"controlsList",
+"nodownload"
 );
 
 
+/*
+IMPORTANT:
+No <source> elements are created
+for every library item.
+
+Only this ONE player gets a source.
+*/
+
+player.src =
+videoUrl(filename);
+
+
+/* Add to page */
+
+featured.append(
+label,
+title,
+player
+);
+
+
+/*
+Extra safety:
+The player itself can NEVER autoplay.
+*/
+
+player.addEventListener(
+"play",
+function(){
+
+/*
+Pause every other video element
+if another one somehow exists.
+*/
+
+document.querySelectorAll(
+"video"
+).forEach(function(video){
+
+if(video !== player){
+
+video.pause();
+
+}
+
+});
+
+}
+);
+
+}
+
+
 /* -----------------------------------------------
-   CREATE LIBRARY VIDEO CARD
+   PLAY SELECTED VIDEO
+------------------------------------------------ */
+
+function playVideo(filename,card){
+
+const player =
+document.getElementById(
+"mainVideoPlayer"
+);
+
+
+/*
+If player doesn't exist,
+create it first.
+*/
+
+if(!player){
+
+createMainPlayer(filename);
+
+}
+
+
+/*
+Get the single player again.
+*/
+
+const activePlayer =
+document.getElementById(
+"mainVideoPlayer"
+);
+
+
+/*
+================================================
+HARD STOP OLD VIDEO
+================================================
+*/
+
+activePlayer.pause();
+
+activePlayer.currentTime = 0;
+
+
+/*
+Remove any autoplay attribute.
+*/
+
+activePlayer.removeAttribute(
+"autoplay"
+);
+
+
+/*
+================================================
+CHANGE SOURCE
+================================================
+*/
+
+activePlayer.src =
+videoUrl(filename);
+
+
+/*
+Force browser to discard old media.
+*/
+
+activePlayer.load();
+
+
+/*
+Remove active state from all cards.
+*/
+
+document.querySelectorAll(
+".video-card"
+).forEach(function(item){
+
+item.classList.remove(
+"active"
+);
+
+});
+
+
+/*
+Highlight selected card.
+*/
+
+if(card){
+
+card.classList.add(
+"active"
+);
+
+}
+
+
+/*
+================================================
+PLAY ONLY AFTER USER CLICK
+================================================
+*/
+
+const playPromise =
+activePlayer.play();
+
+
+if(
+playPromise &&
+typeof playPromise.catch === "function"
+){
+
+playPromise.catch(function(error){
+
+console.log(
+"Playback blocked/waiting:",
+error
+);
+
+});
+
+}
+
+
+/*
+Scroll back to main player.
+*/
+
+document
+.getElementById(
+"featuredVideo"
+)
+.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+}
+
+
+/* -----------------------------------------------
+   CREATE LIBRARY CARD
 ------------------------------------------------ */
 
 function createVideoCard(filename){
 
-  const card =
-    document.createElement("article");
+const card =
+document.createElement(
+"article"
+);
 
-  card.className =
-    "video-card";
-
-
-  const category =
-    document.createElement("div");
-
-  category.className =
-    "category";
-
-  category.textContent =
-    "AI VIDEO ADS";
+card.className =
+"video-card";
 
 
-  const title =
-    document.createElement("h3");
+/* Category */
 
-  title.className =
-    "video-title";
+const category =
+document.createElement(
+"div"
+);
 
-  title.textContent =
-    makeTitle(filename);
+category.className =
+"category";
 
-
-  const video =
-    document.createElement("video");
-
-  video.controls = true;
-
-  video.playsInline = true;
-
-  /*
-    IMPORTANT:
-    Video page load par download/start nahi hogi.
-  */
-
-  video.preload = "none";
-
-  video.setAttribute(
-    "controlsList",
-    "nodownload"
-  );
-
-  video.setAttribute(
-    "disablePictureInPicture",
-    "false"
-  );
+category.textContent =
+"AI VIDEO ADS";
 
 
-  const source =
-    document.createElement("source");
+/* Title */
 
-  source.src =
-    videoUrl(filename);
+const title =
+document.createElement(
+"h3"
+);
 
-  source.type =
-    "video/mp4";
+title.className =
+"video-title";
 
-
-  video.appendChild(source);
-
-
-  video.addEventListener(
-    "error",
-    function(){
-
-      console.error(
-        "Video failed to load:",
-        filename,
-        video.currentSrc
-      );
-
-    }
-  );
+title.textContent =
+makeTitle(filename);
 
 
-  card.append(
-    category,
-    title,
-    video
-  );
+/* Button */
+
+const button =
+document.createElement(
+"button"
+);
+
+button.className =
+"play-video";
+
+button.type =
+"button";
+
+button.textContent =
+"▶  PLAY VIDEO";
 
 
-  return card;
+/*
+User click = selected video.
+*/
+
+button.addEventListener(
+"click",
+function(){
+
+playVideo(
+filename,
+card
+);
+
+}
+);
+
+
+/*
+IMPORTANT:
+There is NO <video> element
+inside this card.
+*/
+
+card.append(
+category,
+title,
+button
+);
+
+
+return card;
 
 }
 
 
 /* -----------------------------------------------
-   FEATURED VIDEO
------------------------------------------------- */
-
-function createFeaturedVideo(filename){
-
-  const featured =
-    document.getElementById(
-      "featuredVideo"
-    );
-
-
-  featured.innerHTML = "";
-
-
-  const label =
-    document.createElement("div");
-
-  label.className =
-    "featured-label";
-
-  label.textContent =
-    "FEATURED WORK";
-
-
-  const title =
-    document.createElement("h3");
-
-  title.textContent =
-    makeTitle(filename);
-
-
-  const player =
-    document.createElement("video");
-
-  player.controls = true;
-
-  player.playsInline = true;
-
-  /*
-    Featured player metadata load karega,
-    lekin autoplay nahi karega.
-  */
-
-  player.preload = "metadata";
-
-  player.setAttribute(
-    "controlsList",
-    "nodownload"
-  );
-
-
-  const source =
-    document.createElement("source");
-
-  source.src =
-    videoUrl(filename);
-
-  source.type =
-    "video/mp4";
-
-
-  player.appendChild(source);
-
-
-  player.addEventListener(
-    "error",
-    function(){
-
-      console.error(
-        "Featured video failed:",
-        filename,
-        player.currentSrc
-      );
-
-    }
-  );
-
-
-  featured.append(
-    label,
-    title,
-    player
-  );
-
-}
-
-
-/* -----------------------------------------------
-   LOAD VIDEOS FROM videos.json
+   LOAD videos.json
 ------------------------------------------------ */
 
 async function loadVideos(){
 
-  const grid =
-    document.getElementById(
-      "videoGrid"
-    );
+const grid =
+document.getElementById(
+"videoGrid"
+);
 
-  const count =
-    document.getElementById(
-      "videoCount"
-    );
+const count =
+document.getElementById(
+"videoCount"
+);
 
-  const featured =
-    document.getElementById(
-      "featuredVideo"
-    );
+const featured =
+document.getElementById(
+"featuredVideo"
+);
 
 
-  try{
+try{
 
-    /*
-      Cache-busting:
-      New videos.json immediately detect ho.
-    */
 
-    const response =
-      await fetch(
-        MANIFEST_URL +
-        "?v=" +
-        Date.now(),
-        {
-          cache:"no-store"
-        }
-      );
+/*
+Cache-busting.
 
+This makes the browser request
+the latest videos.json.
+*/
 
-    if(!response.ok){
+const response =
+await fetch(
 
-      throw new Error(
-        "Video manifest could not be loaded."
-      );
+MANIFEST_URL +
+"?v=" +
+Date.now(),
 
-    }
+{
+cache:"no-store"
+}
 
+);
 
-    const files =
-      await response.json();
 
+if(!response.ok){
 
-    if(!Array.isArray(files)){
+throw new Error(
+"Video manifest could not be loaded."
+);
 
-      throw new Error(
-        "videos.json is not a valid video list."
-      );
+}
 
-    }
 
+/*
+Read JSON.
+*/
 
-    /*
-      Sirf MP4 files rakho.
-    */
+const files =
+await response.json();
 
-    const videos =
-      files
-        .filter(function(name){
 
-          return (
-            typeof name === "string" &&
-            name
-              .toLowerCase()
-              .endsWith(".mp4")
-          );
+if(!Array.isArray(files)){
 
-        })
-        .sort(function(a,b){
+throw new Error(
+"videos.json is not a valid video list."
+);
 
-          return a.localeCompare(
-            b,
-            undefined,
-            {
-              numeric:true,
-              sensitivity:"base"
-            }
-          );
+}
 
-        });
 
+/*
+Only MP4 files.
+*/
 
-    if(!videos.length){
+const videos =
+files
 
-      count.textContent =
-        "0 videos";
+.filter(function(name){
 
+return (
 
-      grid.innerHTML =
-        '<div class="loading">' +
-        'No MP4 videos found yet.' +
-        '</div>';
+typeof name === "string" &&
 
+name
+.toLowerCase()
+.endsWith(".mp4")
 
-      featured.innerHTML =
-        '<div class="loading">' +
-        'Upload your first MP4 video to GitHub.' +
-        '</div>';
+);
 
+})
 
-      return;
+.sort(function(a,b){
 
-    }
+return a.localeCompare(
 
+b,
 
-    /*
-      Video count.
-    */
+undefined,
 
-    count.textContent =
-      videos.length +
-      " video" +
-      (videos.length > 1 ? "s" : "") +
-      " loaded automatically";
+{
+numeric:true,
+sensitivity:"base"
+}
 
+);
 
-    /*
-      First video = featured player.
-    */
+});
 
-    createFeaturedVideo(
-      videos[0]
-    );
 
+/*
+No videos.
+*/
 
-    /*
-      Clear old library.
-    */
+if(!videos.length){
 
-    grid.innerHTML = "";
+count.textContent =
+"0 videos";
 
+grid.innerHTML =
+'<div class="loading">' +
+'No MP4 videos found yet.' +
+'</div>';
 
-    /*
-      Baaki saari videos library mein.
-    */
+featured.innerHTML =
+'<div class="loading">' +
+'Upload your first MP4 video to GitHub.' +
+'</div>';
 
-    videos.forEach(
-      function(name,index){
+return;
 
-        if(index === 0){
+}
 
-          return;
 
-        }
+/*
+Video count.
+*/
 
-        grid.appendChild(
-          createVideoCard(name)
-        );
+count.textContent =
 
-      }
-    );
+videos.length +
 
+" video" +
 
-    /*
-      Agar sirf ek video ho,
-      to library mein bhi dikhao.
-    */
+(
+videos.length > 1
+? "s"
+: ""
+) +
 
-    if(videos.length === 1){
+" loaded automatically";
 
-      grid.appendChild(
-        createVideoCard(
-          videos[0]
-        )
-      );
 
-    }
+/*
+================================================
+CREATE ONE PLAYER ONLY
+================================================
 
+First video is displayed in player,
+BUT DOES NOT AUTOPLAY.
+*/
 
-  }
-  catch(error){
+createMainPlayer(
+videos[0]
+);
 
-    console.error(
-      "RoyalGoyal player error:",
-      error
-    );
 
+/*
+Clear library.
+*/
 
-    count.textContent =
-      "Unable to load videos";
+grid.innerHTML = "";
 
 
-    grid.innerHTML =
-      '<div class="error">' +
-      '⚠️ Video library could not be loaded.' +
-      '<br><br>' +
-      'Please try again in a moment.' +
-      '</div>';
+/*
+Create buttons for ALL videos.
+*/
 
+videos.forEach(function(filename){
 
-    featured.innerHTML =
-      '<div class="error">' +
-      'Featured video could not be loaded.' +
-      '</div>';
+grid.appendChild(
 
-  }
+createVideoCard(
+filename
+)
+
+);
+
+});
+
+
+}
+catch(error){
+
+console.error(
+"RoyalGoyal player error:",
+error
+);
+
+
+count.textContent =
+"Unable to load videos";
+
+
+grid.innerHTML =
+'<div class="error">' +
+
+'⚠️ Video library could not be loaded.' +
+
+'<br><br>' +
+
+'Please try again in a moment.' +
+
+'</div>';
+
+
+featured.innerHTML =
+'<div class="error">' +
+
+'Featured video could not be loaded.' +
+
+'</div>';
+
+}
 
 }
 
 
 /* -----------------------------------------------
-   START PLAYER
+   START
 ------------------------------------------------ */
 
 loadVideos();
