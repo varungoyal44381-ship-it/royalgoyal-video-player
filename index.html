@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RoyalGoyal | AI Video Filmmakers</title>
 
 <style>
 *{
   box-sizing:border-box;
   margin:0;
-  padding:0;
+  padding:0
 }
 
 html{
-  scroll-behavior:smooth;
+  scroll-behavior:smooth
 }
 
 body{
@@ -25,10 +26,8 @@ body{
 
 .container{
   width:min(1100px,94%);
-  margin:auto;
+  margin:auto
 }
-
-/* HERO */
 
 .hero{
   margin-top:18px;
@@ -36,19 +35,19 @@ body{
   border-radius:28px;
   overflow:hidden;
   background:#0b0b0b;
-  box-shadow:0 0 40px rgba(212,163,54,.12);
+  box-shadow:0 0 40px rgba(212,163,54,.12)
 }
 
 .hero-wallpaper{
   width:100%;
   display:block;
   max-height:650px;
-  object-fit:cover;
+  object-fit:cover
 }
 
 .hero-content{
   padding:35px 25px 40px;
-  text-align:center;
+  text-align:center
 }
 
 .brand{
@@ -56,14 +55,14 @@ body{
   letter-spacing:7px;
   font-weight:900;
   color:#e6b84d;
-  margin-bottom:10px;
+  margin-bottom:10px
 }
 
 .subtitle{
   font-size:clamp(18px,3vw,28px);
   font-weight:700;
   letter-spacing:2px;
-  margin-bottom:22px;
+  margin-bottom:22px
 }
 
 .tagline{
@@ -71,7 +70,7 @@ body{
   margin:auto;
   color:#ddd;
   font-size:clamp(16px,2.5vw,21px);
-  line-height:1.7;
+  line-height:1.7
 }
 
 .hero-buttons,
@@ -80,7 +79,7 @@ body{
   display:flex;
   justify-content:center;
   gap:14px;
-  flex-wrap:wrap;
+  flex-wrap:wrap
 }
 
 .btn,
@@ -93,42 +92,38 @@ body{
   border:1px solid #d2a33a;
   color:#e6b84d;
   transition:.25s;
-  cursor:pointer;
+  cursor:pointer
 }
 
 .btn:hover,
 .contact-btn:hover{
   transform:translateY(-3px);
   background:#d2a33a;
-  color:#000;
+  color:#000
 }
 
-/* SECTIONS */
-
 .section{
-  padding:55px 0 10px;
+  padding:55px 0 10px
 }
 
 .section-title{
   text-align:center;
   color:#e6b84d;
   font-size:clamp(27px,5vw,42px);
-  margin-bottom:12px;
+  margin-bottom:12px
 }
 
 .section-subtitle{
   text-align:center;
   color:#aaa;
   margin-bottom:30px;
-  font-size:16px;
+  font-size:16px
 }
-
-/* SERVICES */
 
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:15px;
+  gap:15px
 }
 
 .service{
@@ -137,31 +132,29 @@ body{
   border:1px solid #55400e;
   border-radius:18px;
   background:linear-gradient(145deg,#151515,#090909);
-  transition:.3s;
+  transition:.3s
 }
 
 .service:hover{
   transform:translateY(-5px);
-  border-color:#d2a33a;
+  border-color:#d2a33a
 }
 
 .service-icon{
   font-size:30px;
-  margin-bottom:10px;
+  margin-bottom:10px
 }
 
 .service h3{
-  font-size:16px;
+  font-size:16px
 }
-
-/* FEATURED VIDEO */
 
 .featured{
   margin-top:25px;
   border:1px solid #6c5115;
   border-radius:25px;
   padding:20px;
-  background:#0d0d0d;
+  background:#0d0d0d
 }
 
 .featured-label{
@@ -172,41 +165,30 @@ body{
   border-radius:20px;
   font-size:12px;
   font-weight:bold;
-  margin-bottom:15px;
+  margin-bottom:15px
 }
 
 .featured h3{
   font-size:24px;
-  margin-bottom:18px;
+  margin-bottom:18px
 }
 
-/* VIDEO PLAYER */
-
-.featured video,
-.video-card video{
+/* MAIN VIDEO PLAYER */
+.featured video{
   width:100%;
+  min-height:300px;
+  max-height:700px;
   border-radius:15px;
   background:#000;
   display:block;
-}
-
-.featured video{
-  min-height:220px;
-  max-height:720px;
-  object-fit:contain;
-}
-
-.video-card video{
-  aspect-ratio:16/9;
-  object-fit:contain;
+  object-fit:contain
 }
 
 /* VIDEO LIBRARY */
-
 .video-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:22px;
+  gap:22px
 }
 
 .video-card{
@@ -215,12 +197,12 @@ body{
   border-radius:22px;
   padding:16px;
   overflow:hidden;
-  transition:.3s;
+  transition:.3s
 }
 
 .video-card:hover{
   transform:translateY(-5px);
-  border-color:#d2a33a;
+  border-color:#d2a33a
 }
 
 .category{
@@ -231,30 +213,35 @@ body{
   border-radius:20px;
   font-size:11px;
   font-weight:bold;
-  margin-bottom:12px;
+  margin-bottom:12px
 }
 
 .video-title{
   font-size:20px;
   margin-bottom:13px;
-  line-height:1.3;
+  line-height:1.3
 }
 
-/* STATUS */
+.video-card video{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  border-radius:15px;
+  background:#000;
+  display:block
+}
 
 .loading,
 .error{
   text-align:center;
   padding:50px 20px;
   color:#aaa;
-  font-size:17px;
+  font-size:17px
 }
 
 .error{
-  color:#ffb0b0;
+  color:#ffb0b0
 }
-
-/* CONTACT */
 
 .contact{
   margin-top:60px;
@@ -262,81 +249,78 @@ body{
   text-align:center;
   border:1px solid #6c5115;
   border-radius:25px;
-  background:#0c0c0c;
+  background:#0c0c0c
 }
 
 .contact h2{
   color:#e6b84d;
   font-size:30px;
-  margin-bottom:12px;
+  margin-bottom:12px
 }
 
 .contact p{
   color:#bbb;
   line-height:1.7;
-  margin-bottom:24px;
+  margin-bottom:24px
 }
 
 .contact-buttons{
-  margin-top:0;
+  margin-top:0
 }
 
 .contact-btn{
-  color:#fff;
+  color:#fff
 }
-
-/* FOOTER */
 
 footer{
   text-align:center;
   padding:35px 15px;
   color:#777;
   font-size:14px;
-  line-height:1.7;
+  line-height:1.7
 }
-
-/* MOBILE */
 
 @media(max-width:600px){
 
   .hero{
     margin-top:10px;
-    border-radius:20px;
+    border-radius:20px
   }
 
   .hero-content{
-    padding:28px 18px 32px;
+    padding:28px 18px 32px
   }
 
   .brand{
-    letter-spacing:4px;
+    letter-spacing:4px
   }
 
   .video-grid{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr
   }
 
   .featured{
-    padding:14px;
+    padding:14px
+  }
+
+  .featured video{
+    min-height:220px
   }
 
   .btn,
   .contact-btn{
     width:100%;
-    max-width:300px;
+    max-width:300px
   }
-
 }
 </style>
 </head>
-
 
 <body>
 
 <div class="container">
 
 <!-- HERO -->
-
 <section class="hero">
 
 <img
@@ -347,9 +331,7 @@ footer{
 
 <div class="hero-content">
 
-<div class="brand">
-ROYALGOYAL
-</div>
+<div class="brand">ROYALGOYAL</div>
 
 <div class="subtitle">
 AI VIDEO FILMMAKERS
@@ -387,7 +369,6 @@ a visual identity that captures your audience's attention.
 
 
 <!-- SERVICES -->
-
 <section class="section">
 
 <h2 class="section-title">
@@ -426,12 +407,10 @@ Professional visual content for modern brands
 </div>
 
 </div>
-
 </section>
 
 
-<!-- FEATURED VIDEO -->
-
+<!-- FEATURED PLAYER -->
 <section class="section">
 
 <h2 class="section-title">
@@ -454,7 +433,6 @@ Loading featured video...
 
 
 <!-- VIDEO LIBRARY -->
-
 <section class="section" id="videos">
 
 <h2 class="section-title">
@@ -477,7 +455,6 @@ Loading videos...
 
 
 <!-- CONTACT -->
-
 <section class="contact" id="contact">
 
 <h2>
@@ -523,14 +500,10 @@ Let's create something powerful.
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
 © 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳
-
 <br>
-
 AI Video Filmmakers · Website Designer
 
 </footer>
@@ -540,55 +513,43 @@ AI Video Filmmakers · Website Designer
 
 <script>
 
-/* =========================================================
-   ROYALGOYAL VIDEO PLAYER
-   =========================================================
+/*
+====================================================
+ROYALGOYAL FINAL VIDEO PLAYER
+====================================================
 
-   videos.json = automatic manifest
+1. videos.json automatic rahega
+2. MP4 same GitHub Pages website se load honge
+3. Raw GitHub URL use nahi hoga
+4. Autoplay OFF
+5. Ek time par sirf ONE video play hoga
+6. Dusri video play hote hi baaki sab pause
+7. New MP4 automatically videos.json se load hoga
+====================================================
+*/
 
-   IMPORTANT:
-   Videos are loaded from the SAME GitHub Pages
-   website/repository location.
 
-   Raw GitHub URL is NOT used.
-   ========================================================= */
-
-
-/* Manifest file */
+/* -----------------------------------------------
+   VIDEO MANIFEST
+------------------------------------------------ */
 
 const MANIFEST_URL = "./videos.json";
 
 
-/* =========================================================
-   VIDEO URL
-   =========================================================
-
-   This is intentionally based on the current page URL.
-
-   Example:
-
-   GitHub Pages:
-   /royalgoyal-video-player/
-
-   Video:
-   /royalgoyal-video-player/video.mp4
-
-   Filename is safely encoded so spaces also work.
-   ========================================================= */
+/* -----------------------------------------------
+   CREATE SAFE VIDEO URL
+------------------------------------------------ */
 
 function videoUrl(filename){
 
-  return new URL(
-    encodeURIComponent(filename),
-    document.baseURI
-  ).href;
+  return "./" + encodeURIComponent(filename);
 
 }
 
 
-/* =========================================================
-   VIDEO TITLE
-   ========================================================= */
+/* -----------------------------------------------
+   MAKE NICE TITLE
+------------------------------------------------ */
 
 function makeTitle(filename){
 
@@ -599,7 +560,9 @@ function makeTitle(filename){
     .trim();
 
   if(!name){
+
     name = "RoyalGoyal Video";
+
   }
 
   return name.replace(
@@ -610,9 +573,94 @@ function makeTitle(filename){
 }
 
 
-/* =========================================================
-   CREATE VIDEO CARD
-   ========================================================= */
+/* -----------------------------------------------
+   ⭐ MOST IMPORTANT PART ⭐
+   
+   ONLY ONE VIDEO CAN PLAY AT A TIME.
+   
+   Agar koi bhi video PLAY hoti hai,
+   to page ki baaki saari videos turant PAUSE.
+------------------------------------------------ */
+
+document.addEventListener(
+  "play",
+  function(event){
+
+    if(
+      !event.target ||
+      event.target.tagName !== "VIDEO"
+    ){
+
+      return;
+
+    }
+
+    const activeVideo = event.target;
+
+    document
+      .querySelectorAll("video")
+      .forEach(function(video){
+
+        if(video !== activeVideo){
+
+          video.pause();
+
+        }
+
+      });
+
+  },
+  true
+);
+
+
+/* -----------------------------------------------
+   EXTRA SAFETY
+   
+   Agar browser/player kisi tarah multiple
+   playback trigger kare to playing event par
+   bhi baaki videos pause karenge.
+------------------------------------------------ */
+
+document.addEventListener(
+  "playing",
+  function(event){
+
+    if(
+      !event.target ||
+      event.target.tagName !== "VIDEO"
+    ){
+
+      return;
+
+    }
+
+    const activeVideo = event.target;
+
+    document
+      .querySelectorAll("video")
+      .forEach(function(video){
+
+        if(video !== activeVideo){
+
+          if(!video.paused){
+
+            video.pause();
+
+          }
+
+        }
+
+      });
+
+  },
+  true
+);
+
+
+/* -----------------------------------------------
+   CREATE LIBRARY VIDEO CARD
+------------------------------------------------ */
 
 function createVideoCard(filename){
 
@@ -643,27 +691,30 @@ function createVideoCard(filename){
     makeTitle(filename);
 
 
-  /* VIDEO ELEMENT */
-
   const video =
     document.createElement("video");
 
-  video.controls =
-    true;
+  video.controls = true;
 
-  video.playsInline =
-    true;
+  video.playsInline = true;
 
-  video.preload =
-    "none";
+  /*
+    IMPORTANT:
+    Video page load par download/start nahi hogi.
+  */
+
+  video.preload = "none";
 
   video.setAttribute(
     "controlsList",
     "nodownload"
   );
 
+  video.setAttribute(
+    "disablePictureInPicture",
+    "false"
+  );
 
-  /* SOURCE */
 
   const source =
     document.createElement("source");
@@ -677,8 +728,6 @@ function createVideoCard(filename){
 
   video.appendChild(source);
 
-
-  /* VIDEO ERROR */
 
   video.addEventListener(
     "error",
@@ -706,9 +755,9 @@ function createVideoCard(filename){
 }
 
 
-/* =========================================================
+/* -----------------------------------------------
    FEATURED VIDEO
-   ========================================================= */
+------------------------------------------------ */
 
 function createFeaturedVideo(filename){
 
@@ -718,8 +767,7 @@ function createFeaturedVideo(filename){
     );
 
 
-  featured.innerHTML =
-    "";
+  featured.innerHTML = "";
 
 
   const label =
@@ -739,22 +787,25 @@ function createFeaturedVideo(filename){
     makeTitle(filename);
 
 
-  /* FEATURED VIDEO */
-
   const player =
     document.createElement("video");
 
-  player.controls =
-    true;
+  player.controls = true;
 
-  player.playsInline =
-    true;
+  player.playsInline = true;
 
-  player.preload =
-    "metadata";
+  /*
+    Featured player metadata load karega,
+    lekin autoplay nahi karega.
+  */
 
+  player.preload = "metadata";
 
-  /* SOURCE */
+  player.setAttribute(
+    "controlsList",
+    "nodownload"
+  );
+
 
   const source =
     document.createElement("source");
@@ -768,8 +819,6 @@ function createFeaturedVideo(filename){
 
   player.appendChild(source);
 
-
-  /* ERROR HANDLER */
 
   player.addEventListener(
     "error",
@@ -794,9 +843,9 @@ function createFeaturedVideo(filename){
 }
 
 
-/* =========================================================
-   LOAD VIDEOS.JSON
-   ========================================================= */
+/* -----------------------------------------------
+   LOAD VIDEOS FROM videos.json
+------------------------------------------------ */
 
 async function loadVideos(){
 
@@ -805,12 +854,10 @@ async function loadVideos(){
       "videoGrid"
     );
 
-
   const count =
     document.getElementById(
       "videoCount"
     );
-
 
   const featured =
     document.getElementById(
@@ -820,7 +867,10 @@ async function loadVideos(){
 
   try{
 
-    /* Fetch automatic manifest */
+    /*
+      Cache-busting:
+      New videos.json immediately detect ho.
+    */
 
     const response =
       await fetch(
@@ -842,13 +892,9 @@ async function loadVideos(){
     }
 
 
-    /* Read JSON */
-
     const files =
       await response.json();
 
-
-    /* Validate JSON */
 
     if(!Array.isArray(files)){
 
@@ -859,14 +905,13 @@ async function loadVideos(){
     }
 
 
-    /* =====================================================
-       ONLY MP4 FILES
-       ===================================================== */
+    /*
+      Sirf MP4 files rakho.
+    */
 
     const videos =
       files
-      .filter(
-        function(name){
+        .filter(function(name){
 
           return (
             typeof name === "string" &&
@@ -875,11 +920,20 @@ async function loadVideos(){
               .endsWith(".mp4")
           );
 
-        }
-      );
+        })
+        .sort(function(a,b){
 
+          return a.localeCompare(
+            b,
+            undefined,
+            {
+              numeric:true,
+              sensitivity:"base"
+            }
+          );
 
-    /* No videos */
+        });
+
 
     if(!videos.length){
 
@@ -888,19 +942,15 @@ async function loadVideos(){
 
 
       grid.innerHTML =
-        `
-        <div class="loading">
-          No MP4 videos found yet.
-        </div>
-        `;
+        '<div class="loading">' +
+        'No MP4 videos found yet.' +
+        '</div>';
 
 
       featured.innerHTML =
-        `
-        <div class="loading">
-          Upload your first MP4 video to GitHub.
-        </div>
-        `;
+        '<div class="loading">' +
+        'Upload your first MP4 video to GitHub.' +
+        '</div>';
 
 
       return;
@@ -908,49 +958,45 @@ async function loadVideos(){
     }
 
 
-    /* =====================================================
-       VIDEO COUNT
-       ===================================================== */
+    /*
+      Video count.
+    */
 
     count.textContent =
-      `${videos.length} video${
-        videos.length > 1
-        ? "s"
-        : ""
-      } loaded automatically`;
+      videos.length +
+      " video" +
+      (videos.length > 1 ? "s" : "") +
+      " loaded automatically";
 
 
-    /* =====================================================
-       FEATURED VIDEO
-       ===================================================== */
+    /*
+      First video = featured player.
+    */
 
     createFeaturedVideo(
       videos[0]
     );
 
 
-    /* =====================================================
-       VIDEO LIBRARY
-       ===================================================== */
+    /*
+      Clear old library.
+    */
 
-    grid.innerHTML =
-      "";
+    grid.innerHTML = "";
 
+
+    /*
+      Baaki saari videos library mein.
+    */
 
     videos.forEach(
       function(name,index){
-
-        /*
-          First video is already featured,
-          so don't duplicate it.
-        */
 
         if(index === 0){
 
           return;
 
         }
-
 
         grid.appendChild(
           createVideoCard(name)
@@ -961,8 +1007,8 @@ async function loadVideos(){
 
 
     /*
-      If there is only one video,
-      show it in library as well.
+      Agar sirf ek video ho,
+      to library mein bhi dikhao.
     */
 
     if(videos.length === 1){
@@ -990,34 +1036,30 @@ async function loadVideos(){
 
 
     grid.innerHTML =
-      `
-      <div class="error">
-        ⚠️ Video library could not be loaded.
-        <br><br>
-        Please try again in a moment.
-      </div>
-      `;
+      '<div class="error">' +
+      '⚠️ Video library could not be loaded.' +
+      '<br><br>' +
+      'Please try again in a moment.' +
+      '</div>';
 
 
     featured.innerHTML =
-      `
-      <div class="error">
-        Featured video could not be loaded.
-      </div>
-      `;
+      '<div class="error">' +
+      'Featured video could not be loaded.' +
+      '</div>';
 
   }
 
 }
 
 
-/* =========================================================
+/* -----------------------------------------------
    START PLAYER
-   ========================================================= */
+------------------------------------------------ */
 
 loadVideos();
 
 </script>
 
 </body>
-  </html>
+</html>
