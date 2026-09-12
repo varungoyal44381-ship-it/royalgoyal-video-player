@@ -3,24 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RoyalGoyal | AI Video Filmmakers</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
 
-html{scroll-behavior:smooth}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:#050505;
 color:#fff;
-overflow-x:hidden
+overflow-x:hidden;
 }
 
 .container{
 width:min(1100px,94%);
-margin:auto
+margin:auto;
 }
+
+
+/* ================================
+   HERO
+================================ */
 
 .hero{
 margin-top:18px;
@@ -28,19 +41,19 @@ border:1px solid #b98b24;
 border-radius:28px;
 overflow:hidden;
 background:#0b0b0b;
-box-shadow:0 0 40px rgba(212,163,54,.12)
+box-shadow:0 0 40px rgba(212,163,54,.12);
 }
 
 .hero-wallpaper{
 width:100%;
 display:block;
 max-height:650px;
-object-fit:cover
+object-fit:cover;
 }
 
 .hero-content{
 padding:35px 25px 40px;
-text-align:center
+text-align:center;
 }
 
 .brand{
@@ -48,14 +61,14 @@ font-size:clamp(34px,7vw,70px);
 letter-spacing:7px;
 font-weight:900;
 color:#e6b84d;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .subtitle{
 font-size:clamp(18px,3vw,28px);
 font-weight:700;
 letter-spacing:2px;
-margin-bottom:22px
+margin-bottom:22px;
 }
 
 .tagline{
@@ -63,7 +76,7 @@ max-width:760px;
 margin:auto;
 color:#ddd;
 font-size:clamp(16px,2.5vw,21px);
-line-height:1.7
+line-height:1.7;
 }
 
 .hero-buttons,
@@ -72,7 +85,7 @@ margin-top:28px;
 display:flex;
 justify-content:center;
 gap:14px;
-flex-wrap:wrap
+flex-wrap:wrap;
 }
 
 .btn,
@@ -85,71 +98,88 @@ font-weight:700;
 border:1px solid #d2a33a;
 color:#e6b84d;
 transition:.25s;
-cursor:pointer
+cursor:pointer;
 }
 
 .btn:hover,
 .contact-btn:hover{
 transform:translateY(-3px);
 background:#d2a33a;
-color:#000
+color:#000;
 }
 
+
+/* ================================
+   SECTIONS
+================================ */
+
 .section{
-padding:55px 0 10px
+padding:55px 0 10px;
 }
 
 .section-title{
 text-align:center;
 color:#e6b84d;
 font-size:clamp(27px,5vw,42px);
-margin-bottom:12px
+margin-bottom:12px;
 }
 
 .section-subtitle{
 text-align:center;
 color:#aaa;
 margin-bottom:30px;
-font-size:16px
+font-size:16px;
 }
+
+
+/* ================================
+   SERVICES
+================================ */
 
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px
+gap:15px;
 }
 
 .service{
+display:block;
+text-decoration:none;
+color:#fff;
 padding:22px 15px;
 text-align:center;
 border:1px solid #55400e;
 border-radius:18px;
 background:linear-gradient(145deg,#151515,#090909);
-transition:.3s
+transition:.3s;
+cursor:pointer;
 }
 
 .service:hover{
 transform:translateY(-5px);
-border-color:#d2a33a
+border-color:#d2a33a;
 }
 
 .service-icon{
 font-size:30px;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .service h3{
-font-size:16px
+font-size:16px;
 }
 
-/* MAIN SINGLE PLAYER */
+
+/* ================================
+   MAIN VIDEO PLAYER
+================================ */
 
 .featured{
 margin-top:25px;
 border:1px solid #6c5115;
 border-radius:25px;
 padding:20px;
-background:#0d0d0d
+background:#0d0d0d;
 }
 
 .featured-label{
@@ -160,12 +190,12 @@ color:#e6b84d;
 border-radius:20px;
 font-size:12px;
 font-weight:bold;
-margin-bottom:15px
+margin-bottom:15px;
 }
 
 .featured h3{
 font-size:24px;
-margin-bottom:18px
+margin-bottom:18px;
 }
 
 .featured video{
@@ -175,15 +205,18 @@ max-height:700px;
 border-radius:15px;
 background:#000;
 display:block;
-object-fit:contain
+object-fit:contain;
 }
 
-/* VIDEO LIBRARY */
+
+/* ================================
+   VIDEO LIBRARY
+================================ */
 
 .video-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:22px
+gap:22px;
 }
 
 .video-card{
@@ -192,17 +225,17 @@ border:1px solid #55400e;
 border-radius:22px;
 padding:16px;
 overflow:hidden;
-transition:.3s
+transition:.3s;
 }
 
 .video-card:hover{
 transform:translateY(-5px);
-border-color:#d2a33a
+border-color:#d2a33a;
 }
 
 .video-card.active{
 border-color:#d2a33a;
-box-shadow:0 0 25px rgba(212,163,54,.15)
+box-shadow:0 0 25px rgba(212,163,54,.15);
 }
 
 .category{
@@ -213,51 +246,111 @@ padding:6px 11px;
 border-radius:20px;
 font-size:11px;
 font-weight:bold;
-margin-bottom:12px
+margin-bottom:12px;
 }
 
 .video-title{
 font-size:20px;
 margin-bottom:13px;
-line-height:1.3
+line-height:1.3;
 }
 
-.play-video{
+
+/* ================================
+   REAL VIDEO THUMBNAIL
+================================ */
+
+.video-thumb{
+position:relative;
 width:100%;
-min-height:78px;
-border:1px solid #6c5115;
+aspect-ratio:16/9;
+margin-top:8px;
 border-radius:15px;
-background:linear-gradient(145deg,#171717,#080808);
-color:#e6b84d;
-font-size:17px;
-font-weight:800;
+overflow:hidden;
+background:#111;
+border:1px solid #30250b;
 cursor:pointer;
-padding:18px;
-transition:.25s
 }
 
-.play-video:hover{
-background:#d2a33a;
+.video-thumb video{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+background:#111;
+pointer-events:none;
+}
+
+.video-thumb-overlay{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(0,0,0,.12);
+pointer-events:none;
+}
+
+.video-thumb-play{
+width:72px;
+height:72px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,.92);
 color:#000;
-transform:translateY(-2px)
+font-size:31px;
+padding-left:5px;
+box-shadow:0 5px 25px rgba(0,0,0,.45);
 }
 
-.video-card.active .play-video{
-background:#d2a33a;
-color:#000
+.video-thumb-loading{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#171717;
+color:#777;
+font-size:13px;
+z-index:2;
+pointer-events:none;
 }
+
+.video-thumb-broken{
+position:absolute;
+left:10px;
+right:10px;
+bottom:8px;
+text-align:center;
+font-size:11px;
+color:#ffb0b0;
+display:none;
+z-index:3;
+}
+
+
+/* ================================
+   LOADING / ERROR
+================================ */
 
 .loading,
 .error{
 text-align:center;
 padding:50px 20px;
 color:#aaa;
-font-size:17px
+font-size:17px;
 }
 
 .error{
-color:#ffb0b0
+color:#ffb0b0;
 }
+
+
+/* ================================
+   CONTACT
+================================ */
 
 .contact{
 margin-top:60px;
@@ -265,78 +358,100 @@ padding:40px 25px;
 text-align:center;
 border:1px solid #6c5115;
 border-radius:25px;
-background:#0c0c0c
+background:#0c0c0c;
 }
 
 .contact h2{
 color:#e6b84d;
 font-size:30px;
-margin-bottom:12px
+margin-bottom:12px;
 }
 
 .contact p{
 color:#bbb;
 line-height:1.7;
-margin-bottom:24px
+margin-bottom:24px;
 }
 
 .contact-buttons{
-margin-top:0
+margin-top:0;
 }
 
 .contact-btn{
-color:#fff
+color:#fff;
 }
+
+
+/* ================================
+   FOOTER
+================================ */
 
 footer{
 text-align:center;
 padding:35px 15px;
 color:#777;
 font-size:14px;
-line-height:1.7
+line-height:1.7;
 }
+
+
+/* ================================
+   MOBILE
+================================ */
 
 @media(max-width:600px){
 
 .hero{
 margin-top:10px;
-border-radius:20px
+border-radius:20px;
 }
 
 .hero-content{
-padding:28px 18px 32px
+padding:28px 18px 32px;
 }
 
 .brand{
-letter-spacing:4px
+letter-spacing:4px;
 }
 
 .video-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .featured{
-padding:14px
+padding:14px;
 }
 
 .featured video{
-min-height:220px
+min-height:220px;
 }
 
 .btn,
 .contact-btn{
 width:100%;
-max-width:300px
+max-width:300px;
 }
+
+.video-thumb-play{
+width:64px;
+height:64px;
+font-size:28px;
 }
+
+}
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
-<!-- HERO -->
+
+<!-- =========================================
+     HERO
+========================================= -->
 
 <section class="hero">
 
@@ -357,18 +472,27 @@ AI VIDEO FILMMAKERS
 </div>
 
 <p class="tagline">
+
 We don't just make videos — we give your
 <strong>business, product, and brand</strong>
 a visual identity that captures your audience's attention.
+
 </p>
+
 
 <div class="hero-buttons">
 
-<a class="btn" href="#videos">
+<a
+class="btn"
+href="#videos"
+>
 🎬 View Our Work
 </a>
 
-<a class="btn" href="#contact">
+<a
+class="btn"
+href="#contact"
+>
 🤝 Work With Us
 </a>
 
@@ -384,10 +508,14 @@ rel="noopener"
 </div>
 
 </div>
+
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- =========================================
+     SERVICES
+========================================= -->
 
 <section class="section">
 
@@ -399,39 +527,89 @@ WHAT WE CREATE
 Professional visual content for modern brands
 </p>
 
+
 <div class="services">
 
-<div class="service">
-<div class="service-icon">🎬</div>
-<h3>AI Video Ads</h3>
+
+<a
+class="service"
+href="#videos"
+>
+<div class="service-icon">
+🎬
 </div>
 
-<div class="service">
-<div class="service-icon">💎</div>
-<h3>Commercial Ads</h3>
+<h3>
+AI Video Ads
+</h3>
+</a>
+
+
+<a
+class="service"
+href="#videos"
+>
+<div class="service-icon">
+💎
 </div>
 
-<div class="service">
-<div class="service-icon">🎨</div>
-<h3>2D / 3D Animation</h3>
+<h3>
+Commercial Ads
+</h3>
+</a>
+
+
+<a
+class="service"
+href="#videos"
+>
+<div class="service-icon">
+🎨
 </div>
 
-<div class="service">
-<div class="service-icon">⚡</div>
-<h3>Motion Graphics</h3>
+<h3>
+2D / 3D Animation
+</h3>
+</a>
+
+
+<a
+class="service"
+href="#videos"
+>
+<div class="service-icon">
+⚡
 </div>
 
-<div class="service">
-<div class="service-icon">📱</div>
-<h3>Social Media Videos</h3>
+<h3>
+Motion Graphics
+</h3>
+</a>
+
+
+<a
+class="service"
+href="#videos"
+>
+<div class="service-icon">
+📱
 </div>
+
+<h3>
+Social Media Videos
+</h3>
+</a>
+
 
 </div>
 
 </section>
 
 
-<!-- SINGLE FEATURED PLAYER -->
+
+<!-- =========================================
+     ONE MAIN PLAYER
+========================================= -->
 
 <section class="section">
 
@@ -440,10 +618,14 @@ Professional visual content for modern brands
 </h2>
 
 <p class="section-subtitle">
-Select a video from the library below to play it here
+Select any thumbnail below to play that video
 </p>
 
-<div id="featuredVideo" class="featured">
+
+<div
+id="featuredVideo"
+class="featured"
+>
 
 <div class="loading">
 🔄 Loading video player...
@@ -454,19 +636,32 @@ Select a video from the library below to play it here
 </section>
 
 
-<!-- FULL VIDEO LIBRARY -->
 
-<section class="section" id="videos">
+<!-- =========================================
+     FULL VIDEO LIBRARY
+========================================= -->
+
+<section
+class="section"
+id="videos"
+>
 
 <h2 class="section-title">
 🎬 FULL VIDEO LIBRARY
 </h2>
 
-<p id="videoCount" class="section-subtitle">
+<p
+id="videoCount"
+class="section-subtitle"
+>
 Loading videos...
 </p>
 
-<div id="videoGrid" class="video-grid">
+
+<div
+id="videoGrid"
+class="video-grid"
+>
 
 <div class="loading">
 🔄 Loading your video library...
@@ -477,22 +672,34 @@ Loading videos...
 </section>
 
 
-<!-- CONTACT -->
 
-<section class="contact" id="contact">
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section
+class="contact"
+id="contact"
+>
 
 <h2>
 WORK WITH ROYALGOYAL
 </h2>
 
 <p>
+
 Need an AI video advertisement, commercial,
 animation or social media video for your business?
+
 <br>
+
 Let's create something powerful.
+
 </p>
 
+
 <div class="contact-buttons">
+
 
 <a
 class="contact-btn"
@@ -503,12 +710,14 @@ rel="noopener"
 💬 WhatsApp
 </a>
 
+
 <a
 class="contact-btn"
 href="mailto:varungoyal44381@gmail.com"
 >
 📧 Email
 </a>
+
 
 <a
 class="contact-btn"
@@ -519,39 +728,54 @@ rel="noopener"
 🌐 Portfolio
 </a>
 
+
 </div>
 
 </section>
 
 
+
 <footer>
 
 © 2026 RoyalGoyal · Designed with ❤️ in India 🇮🇳
+
 <br>
+
 AI Video Filmmakers · Website Designer
 
 </footer>
 
+
 </div>
+
 
 
 <script>
 
 /*
 ====================================================
-ROYALGOYAL FINAL PLAYER
+ROYALGOYAL FINAL VIDEO PLAYER
 ====================================================
 
 IMPORTANT:
 
-• videos.json automatic rahega
-• Page par sirf ONE actual <video> player hoga
-• Library mein duplicate video players nahi honge
-• Autoplay OFF
-• User button click karega tabhi video chalegi
-• New video select karte hi previous video STOP hogi
-• Previous video ka audio bhi STOP hoga
-• MP4 same GitHub Pages origin se load hogi
+There is ONLY ONE REAL PLAYABLE PLAYER.
+
+The library cards contain:
+- Real video frame thumbnail
+- Play icon overlay
+- NO controls
+- NO audio
+- NO autoplay
+
+When user taps thumbnail:
+1. Main player stops old video
+2. Old source is removed
+3. New video source is loaded
+4. New video plays
+5. Previous audio cannot continue
+
+videos.json remains automatic.
 ====================================================
 */
 
@@ -559,9 +783,9 @@ IMPORTANT:
 const MANIFEST_URL = "./videos.json";
 
 
-/* -----------------------------------------------
+/* ================================================
    VIDEO URL
------------------------------------------------- */
+================================================ */
 
 function videoUrl(filename){
 
@@ -570,44 +794,53 @@ return "./" + encodeURIComponent(filename);
 }
 
 
-/* -----------------------------------------------
-   TITLE
------------------------------------------------- */
+/* ================================================
+   VIDEO TITLE
+================================================ */
 
 function makeTitle(filename){
 
-let name = filename
+let name =
+filename
 
-.replace(/\.[^/.]+$/,"")
+.replace(
+/\.[^/.]+$/,
+""
+)
 
-.replace(/[_-]+/g," ")
+.replace(
+/[_-]+/g,
+" "
+)
 
-.replace(/\b\d+\b/g,"")
+.replace(
+/\b\d+\b/g,
+""
+)
 
 .trim();
 
 
 if(!name){
 
-name = "RoyalGoyal Video";
+name =
+"RoyalGoyal Video";
 
 }
 
 
 return name.replace(
-
 /\b\w/g,
-
-letter => letter.toUpperCase()
-
+letter =>
+letter.toUpperCase()
 );
 
 }
 
 
-/* -----------------------------------------------
-   CREATE ONE SINGLE PLAYER
------------------------------------------------- */
+/* ================================================
+   CREATE ONE MAIN PLAYER
+================================================ */
 
 function createMainPlayer(filename){
 
@@ -617,13 +850,14 @@ document.getElementById(
 );
 
 
-featured.innerHTML = "";
+featured.innerHTML =
+"";
 
-
-/* Label */
 
 const label =
-document.createElement("div");
+document.createElement(
+"div"
+);
 
 label.className =
 "featured-label";
@@ -632,34 +866,44 @@ label.textContent =
 "NOW PLAYING";
 
 
-/* Title */
-
 const title =
-document.createElement("h3");
+document.createElement(
+"h3"
+);
 
 title.textContent =
 makeTitle(filename);
 
 
-/* Player */
-
 const player =
-document.createElement("video");
+document.createElement(
+"video"
+);
+
 
 player.id =
 "mainVideoPlayer";
 
+
 player.controls =
 true;
+
 
 player.playsInline =
 true;
 
+
 player.preload =
 "metadata";
 
+
 player.autoplay =
 false;
+
+
+player.src =
+videoUrl(filename);
+
 
 player.setAttribute(
 "controlsList",
@@ -669,42 +913,21 @@ player.setAttribute(
 
 /*
 IMPORTANT:
-No <source> elements are created
-for every library item.
-
-Only this ONE player gets a source.
-*/
-
-player.src =
-videoUrl(filename);
-
-
-/* Add to page */
-
-featured.append(
-label,
-title,
-player
-);
-
-
-/*
-Extra safety:
-The player itself can NEVER autoplay.
+If the main player starts,
+make absolutely sure no other
+video element is playing.
 */
 
 player.addEventListener(
 "play",
 function(){
 
-/*
-Pause every other video element
-if another one somehow exists.
-*/
-
-document.querySelectorAll(
+document
+.querySelectorAll(
 "video"
-).forEach(function(video){
+)
+.forEach(
+function(video){
 
 if(video !== player){
 
@@ -717,16 +940,40 @@ video.pause();
 }
 );
 
+
+player.addEventListener(
+"error",
+function(){
+
+console.error(
+"Main video failed:",
+filename,
+player.currentSrc
+);
+
+}
+);
+
+
+featured.append(
+label,
+title,
+player
+);
+
 }
 
 
-/* -----------------------------------------------
+/* ================================================
    PLAY SELECTED VIDEO
------------------------------------------------- */
+================================================ */
 
-function playVideo(filename,card){
+function playVideo(
+filename,
+card
+){
 
-const player =
+let player =
 document.getElementById(
 "mainVideoPlayer"
 );
@@ -734,76 +981,98 @@ document.getElementById(
 
 /*
 If player doesn't exist,
-create it first.
+create it.
 */
 
 if(!player){
 
-createMainPlayer(filename);
+createMainPlayer(
+filename
+);
+
+player =
+document.getElementById(
+"mainVideoPlayer"
+);
 
 }
 
 
 /*
-Get the single player again.
+================================================
+STOP OLD VIDEO COMPLETELY
+================================================
 */
 
-const activePlayer =
-document.getElementById(
-"mainVideoPlayer"
+try{
+
+player.pause();
+
+}catch(e){}
+
+
+/*
+Remove old source.
+*/
+
+player.removeAttribute(
+"src"
 );
 
 
 /*
-================================================
-HARD STOP OLD VIDEO
-================================================
+Force browser to release old media.
 */
 
-activePlayer.pause();
+try{
 
-activePlayer.currentTime = 0;
+player.load();
 
-
-/*
-Remove any autoplay attribute.
-*/
-
-activePlayer.removeAttribute(
-"autoplay"
-);
+}catch(e){}
 
 
 /*
 ================================================
-CHANGE SOURCE
+LOAD NEW VIDEO
 ================================================
 */
 
-activePlayer.src =
+player.src =
 videoUrl(filename);
 
 
 /*
-Force browser to discard old media.
+Do not autoplay by attribute.
 */
 
-activePlayer.load();
+player.autoplay =
+false;
 
 
 /*
-Remove active state from all cards.
+Load new source.
 */
 
-document.querySelectorAll(
+player.load();
+
+
+/*
+Remove active card from all.
+*/
+
+document
+.querySelectorAll(
 ".video-card"
-).forEach(function(item){
+)
+.forEach(
+function(item){
 
 item.classList.remove(
 "active"
 );
 
-});
+}
+);
 
 
 /*
@@ -821,33 +1090,38 @@ card.classList.add(
 
 /*
 ================================================
-PLAY ONLY AFTER USER CLICK
+USER CLICKED THE THUMBNAIL
 ================================================
+
+Therefore this play() is allowed.
 */
 
-const playPromise =
-activePlayer.play();
+const promise =
+player.play();
 
 
 if(
-playPromise &&
-typeof playPromise.catch === "function"
+promise &&
+typeof promise.catch ===
+"function"
 ){
 
-playPromise.catch(function(error){
+promise.catch(
+function(error){
 
 console.log(
-"Playback blocked/waiting:",
+"Playback waiting for user:",
 error
 );
 
-});
+}
+);
 
 }
 
 
 /*
-Scroll back to main player.
+Scroll to the ONE real player.
 */
 
 document
@@ -865,11 +1139,13 @@ block:"center"
 }
 
 
-/* -----------------------------------------------
-   CREATE LIBRARY CARD
------------------------------------------------- */
+/* ================================================
+   CREATE THUMBNAIL CARD
+================================================ */
 
-function createVideoCard(filename){
+function createVideoCard(
+filename
+){
 
 const card =
 document.createElement(
@@ -880,7 +1156,9 @@ card.className =
 "video-card";
 
 
-/* Category */
+/*
+CATEGORY
+*/
 
 const category =
 document.createElement(
@@ -894,7 +1172,9 @@ category.textContent =
 "AI VIDEO ADS";
 
 
-/* Title */
+/*
+TITLE
+*/
 
 const title =
 document.createElement(
@@ -908,30 +1188,288 @@ title.textContent =
 makeTitle(filename);
 
 
-/* Button */
+/*
+================================================
+THUMBNAIL CONTAINER
+================================================
+*/
 
-const button =
+const thumb =
 document.createElement(
-"button"
+"div"
 );
 
-button.className =
-"play-video";
-
-button.type =
-"button";
-
-button.textContent =
-"▶  PLAY VIDEO";
+thumb.className =
+"video-thumb";
 
 
 /*
-User click = selected video.
+================================================
+REAL VIDEO PREVIEW
+================================================
+
+This video is:
+- muted
+- paused
+- no controls
+- no autoplay
+
+It is ONLY used to show a frame.
 */
 
-button.addEventListener(
-"click",
+const preview =
+document.createElement(
+"video"
+);
+
+
+preview.className =
+"video-preview";
+
+
+preview.muted =
+true;
+
+
+preview.defaultMuted =
+true;
+
+
+preview.volume =
+0;
+
+
+preview.playsInline =
+true;
+
+
+preview.controls =
+false;
+
+
+preview.autoplay =
+false;
+
+
+/*
+Metadata is enough to locate
+the first frame.
+
+The #t=0.10 hint asks the browser
+for a frame near the beginning.
+*/
+
+preview.preload =
+"metadata";
+
+
+preview.src =
+videoUrl(filename) +
+"#t=0.10";
+
+
+preview.setAttribute(
+"aria-hidden",
+"true"
+);
+
+
+/*
+================================================
+LOADING MESSAGE
+================================================
+*/
+
+const loading =
+document.createElement(
+"div"
+);
+
+loading.className =
+"video-thumb-loading";
+
+loading.textContent =
+"Loading thumbnail...";
+
+
+/*
+================================================
+PLAY ICON
+================================================
+*/
+
+const overlay =
+document.createElement(
+"div"
+);
+
+overlay.className =
+"video-thumb-overlay";
+
+
+const playIcon =
+document.createElement(
+"div"
+);
+
+playIcon.className =
+"video-thumb-play";
+
+playIcon.textContent =
+"▶";
+
+
+overlay.appendChild(
+playIcon
+);
+
+
+/*
+================================================
+BROKEN MESSAGE
+================================================
+*/
+
+const broken =
+document.createElement(
+"div"
+);
+
+broken.className =
+"video-thumb-broken";
+
+broken.textContent =
+"⚠ Preview unavailable";
+
+
+/*
+================================================
+THUMBNAIL LOADED
+================================================
+*/
+
+preview.addEventListener(
+"loadeddata",
 function(){
+
+try{
+
+preview.pause();
+
+}catch(e){}
+
+
+loading.style.display =
+"none";
+
+}
+);
+
+
+/*
+Metadata loaded:
+try to seek to first visible frame.
+*/
+
+preview.addEventListener(
+"loadedmetadata",
+function(){
+
+try{
+
+if(
+Number.isFinite(
+preview.duration
+) &&
+preview.duration > 0
+){
+
+preview.currentTime =
+Math.min(
+0.10,
+preview.duration
+);
+
+}
+
+}catch(e){}
+
+}
+);
+
+
+/*
+Seek completed.
+*/
+
+preview.addEventListener(
+"seeked",
+function(){
+
+try{
+
+preview.pause();
+
+}catch(e){}
+
+
+loading.style.display =
+"none";
+
+}
+);
+
+
+/*
+If browser gives us a frame
+through loadeddata.
+*/
+
+preview.addEventListener(
+"canplay",
+function(){
+
+try{
+
+preview.pause();
+
+}catch(e){}
+
+
+loading.style.display =
+"none";
+
+}
+);
+
+
+/*
+================================================
+VIDEO ERROR
+================================================
+*/
+
+preview.addEventListener(
+"error",
+function(){
+
+loading.style.display =
+"none";
+
+broken.style.display =
+"block";
+
+}
+);
+
+
+/*
+================================================
+THUMBNAIL CLICK
+================================================
+*/
+
+function selectThisVideo(){
 
 playVideo(
 filename,
@@ -939,19 +1477,34 @@ card
 );
 
 }
+
+
+thumb.addEventListener(
+"click",
+selectThisVideo
 );
 
 
 /*
-IMPORTANT:
-There is NO <video> element
-inside this card.
+Build thumbnail.
+*/
+
+thumb.append(
+preview,
+loading,
+overlay,
+broken
+);
+
+
+/*
+Build card.
 */
 
 card.append(
 category,
 title,
-button
+thumb
 );
 
 
@@ -960,9 +1513,9 @@ return card;
 }
 
 
-/* -----------------------------------------------
+/* ================================================
    LOAD videos.json
------------------------------------------------- */
+================================================ */
 
 async function loadVideos(){
 
@@ -971,10 +1524,12 @@ document.getElementById(
 "videoGrid"
 );
 
+
 const count =
 document.getElementById(
 "videoCount"
 );
+
 
 const featured =
 document.getElementById(
@@ -986,10 +1541,11 @@ try{
 
 
 /*
-Cache-busting.
+================================================
+CACHE BUST
+================================================
 
-This makes the browser request
-the latest videos.json.
+Always ask for latest videos.json.
 */
 
 const response =
@@ -1009,15 +1565,11 @@ cache:"no-store"
 if(!response.ok){
 
 throw new Error(
-"Video manifest could not be loaded."
+"videos.json could not be loaded."
 );
 
 }
 
-
-/*
-Read JSON.
-*/
 
 const files =
 await response.json();
@@ -1026,34 +1578,44 @@ await response.json();
 if(!Array.isArray(files)){
 
 throw new Error(
-"videos.json is not a valid video list."
+"videos.json is invalid."
 );
 
 }
 
 
 /*
-Only MP4 files.
+================================================
+ONLY MP4
+================================================
 */
 
 const videos =
 files
 
-.filter(function(name){
+.filter(
+function(name){
 
 return (
 
-typeof name === "string" &&
+typeof name ===
+"string"
+
+&&
 
 name
 .toLowerCase()
-.endsWith(".mp4")
+.endsWith(
+".mp4"
+)
 
 );
 
-})
+}
+)
 
-.sort(function(a,b){
+.sort(
+function(a,b){
 
 return a.localeCompare(
 
@@ -1062,33 +1624,48 @@ b,
 undefined,
 
 {
+
 numeric:true,
+
 sensitivity:"base"
+
 }
 
 );
 
-});
+}
+);
 
 
 /*
-No videos.
+================================================
+NO VIDEOS
+================================================
 */
 
-if(!videos.length){
+if(
+videos.length === 0
+){
 
 count.textContent =
 "0 videos";
 
+
 grid.innerHTML =
 '<div class="loading">' +
+
 'No MP4 videos found yet.' +
+
 '</div>';
+
 
 featured.innerHTML =
 '<div class="loading">' +
+
 'Upload your first MP4 video to GitHub.' +
+
 '</div>';
+
 
 return;
 
@@ -1096,7 +1673,9 @@ return;
 
 
 /*
-Video count.
+================================================
+VIDEO COUNT
+================================================
 */
 
 count.textContent =
@@ -1116,11 +1695,11 @@ videos.length > 1
 
 /*
 ================================================
-CREATE ONE PLAYER ONLY
+ONE MAIN PLAYER
 ================================================
 
-First video is displayed in player,
-BUT DOES NOT AUTOPLAY.
+First video is displayed,
+but DOES NOT PLAY automatically.
 */
 
 createMainPlayer(
@@ -1132,14 +1711,20 @@ videos[0]
 Clear library.
 */
 
-grid.innerHTML = "";
+grid.innerHTML =
+"";
 
 
 /*
-Create buttons for ALL videos.
+================================================
+CREATE ALL THUMBNAIL CARDS
+================================================
+
+Every MP4 gets a thumbnail card.
 */
 
-videos.forEach(function(filename){
+videos.forEach(
+function(filename){
 
 grid.appendChild(
 
@@ -1149,14 +1734,15 @@ filename
 
 );
 
-});
+}
+);
 
 
 }
 catch(error){
 
 console.error(
-"RoyalGoyal player error:",
+"RoyalGoyal video error:",
 error
 );
 
@@ -1166,18 +1752,20 @@ count.textContent =
 
 
 grid.innerHTML =
+
 '<div class="error">' +
 
 '⚠️ Video library could not be loaded.' +
 
 '<br><br>' +
 
-'Please try again in a moment.' +
+'Please refresh the page and try again.' +
 
 '</div>';
 
 
 featured.innerHTML =
+
 '<div class="error">' +
 
 'Featured video could not be loaded.' +
@@ -1189,13 +1777,4 @@ featured.innerHTML =
 }
 
 
-/* -----------------------------------------------
-   START
------------------------------------------------- */
-
-loadVideos();
-
-</script>
-
-</body>
-</html>
+/* =====
